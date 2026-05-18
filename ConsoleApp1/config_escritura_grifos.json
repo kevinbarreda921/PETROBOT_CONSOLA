@@ -1,0 +1,44 @@
+{
+  "MapeoEscritura": {
+    "BRASIL": {
+      "Columnas": {
+        "Venta_GPL": "D",
+        "Venta_GNV": "E",
+        "Total_venta_acumulada": "C",
+        "Total_Tarjeta_de_Credito_Liquidos": "AO",
+        "Total_Tarjeta_de_Credito_GLP": "AP",
+        "Total_Tarjeta_de_Credito_GNV": "AQ",
+        "ErrorMaquina": "AR",
+        "Recaudo_Cofide_GNV": "F",
+        "Gastos": "BY",
+        "Ventas_con_transferencia": "AY",
+        "DescuentoLiquidos": "AO",
+        "DescuentoGLP": "AP",
+        "Hermes_monto_liquido": "AX",
+        "Hermes_monto_GLP": "BD",
+        "Hermes_monto_GNV1": "BE",
+        "Hermes_monto_GNV2": "BF"
+      }
+    },
+    "VIRU": {
+      "Columnas": {
+        "Venta_GPL": "",
+        "Venta_GNV": "",
+        "Total_venta_acumulada": "",
+        "Total_Tarjeta_de_Credito_Liquidos": "",
+        "Total_Tarjeta_de_Credito_GLP": "",
+        "Total_Tarjeta_de_Credito_GNV": "",
+        "ErrorMaquina": "",
+        "Recaudo_Cofide_GNV": "",
+        "Gastos": "",
+        "Ventas_con_transferencia": "",
+        "DescuentoLiquidos": "",
+        "DescuentoGLP": "",
+        "Hermes_monto_liquido": "",
+        "Hermes_monto_GLP": "",
+        "Hermes_monto_GNV1": "",
+        "Hermes_monto_GNV2": ""
+      }
+    }
+  }
+}
