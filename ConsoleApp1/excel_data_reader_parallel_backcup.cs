@@ -1,4 +1,4 @@
-﻿using ExcelDataReader;
+using ExcelDataReader;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Text;
@@ -55,7 +55,7 @@ namespace ConsoleApp1
                                 {
                                     string dato = (valor is DateTime dt)
                                         ? dt.ToString("dd/MM/yyyy")
-                                        : valor.ToString().Replace(" 00:00:00", "").Trim();
+                                        : (valor.ToString() ?? "").Replace(" 00:00:00", "").Trim();
 
                                     resultados.Add($"Archivo: {Path.GetFileName(ruta)} | Hoja: {nombreHoja} | Valor: {dato}");
                                 }

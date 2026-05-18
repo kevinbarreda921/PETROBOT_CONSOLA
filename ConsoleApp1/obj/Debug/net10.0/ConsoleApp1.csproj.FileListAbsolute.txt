@@ -167,10 +167,10 @@ C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.Generat
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.AssemblyInfoInputs.cache
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.AssemblyInfo.cs
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.sourcelink.json
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleA.CB28C8CC.Up2Date
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.dll
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\refint\ConsoleApp1.dll
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.pdb
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.genruntimeconfig.cache
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ref\ConsoleApp1.dll
-C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.sourcelink.json

@@ -1,4 +1,4 @@
-﻿using ConsoleApp1;
+using ConsoleApp1;
 using ExcelDataReader;
 using System.Collections.Concurrent;
 using System.Reflection;
@@ -55,12 +55,12 @@ public class excel_data_reader_parallel
         }
     }
 
-    public static void f_excel_data_reader_parallel()
+    public static ConcurrentBag<ArchivoGrifo> f_excel_data_reader_parallel()
     {
         string rutaProyecto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
         string carpeta = Path.Combine(rutaProyecto, "ArchivosExcel", "Parte_diario");
 
-        if (!Directory.Exists(carpeta)) return;
+        if (!Directory.Exists(carpeta)) return new ConcurrentBag<ArchivoGrifo>();
 
         var archivos = Directory.GetFiles(carpeta, "*.xlsx");
         var listaGrifosProcesar = new ConcurrentBag<ArchivoGrifo>();
@@ -133,7 +133,7 @@ public class excel_data_reader_parallel
                                 else if (DateTime.TryParse(fecha_hoja.ToString(), out DateTime parsedDate)) registro.Dia = parsedDate.ToString("dd/MM/yyyy");
                                 else
                                 {
-                                    string rawFecha = fecha_hoja.ToString();
+                                    string rawFecha = fecha_hoja.ToString() ?? "";
                                     int indexSpace = rawFecha.IndexOf(" 00:00");
                                     registro.Dia = indexSpace != -1 ? rawFecha.Substring(0, indexSpace) : rawFecha.Trim();
                                 }
@@ -151,7 +151,7 @@ public class excel_data_reader_parallel
                             decimal numValor = 0;
                             if (valor != null)
                             {
-                                string cleanStr = valor.ToString().Replace(",", "").Replace("-", "");
+                                string cleanStr = (valor.ToString() ?? "").Replace(",", "").Replace("-", "");
                                 decimal.TryParse(cleanStr, out numValor);
                             }
 
@@ -175,7 +175,7 @@ public class excel_data_reader_parallel
 
                             if (valorNombre != null && !string.IsNullOrWhiteSpace(valorNombre.ToString()))
                             {
-                                string nombreLimpio = valorNombre.ToString().Trim();
+                                string nombreLimpio = (valorNombre.ToString() ?? "").Trim();
                                 decimal.TryParse(valorMonto?.ToString(), out decimal montoActual);
 
                                 if (clientesAgrupados.TryGetValue(nombreLimpio, out decimal montoExistente))
@@ -266,8 +266,6 @@ public class excel_data_reader_parallel
                 Console.WriteLine($"Error procesando el archivo {Path.GetFileName(ruta)}: {ex.Message}");
             }
         });
-
-        string json = JsonSerializer.Serialize(listaGrifosProcesar, new JsonSerializerOptions { WriteIndented = true });
-        Console.WriteLine(json);
+        return listaGrifosProcesar;
     }
 }

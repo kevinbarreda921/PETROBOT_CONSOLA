@@ -1,17 +1,26 @@
-﻿using ConsoleApp1;
+using ConsoleApp1;
 using System.Diagnostics;
 using System.Text.Json;
 
-//excel_data_reader_parallel.f_excel_data_reader_parallel();
 
 Stopwatch timerGlobal = Stopwatch.StartNew();
 
+var listaGrifosProcesar = excel_data_reader_parallel.f_excel_data_reader_parallel();
+
 var escritorExcel = new ExcelDataWrite();
 
-//List<string> misGrifos = new List<string> { "BRASIL", "VIRU", "chILCA","PUENTE","MAKITA","SAN PABLO","HUANCHACO","ENACE","ACAPULCO","CATACAOS","TULIS","SAN MARCOS","MARIA", "VELITA","QUISTOCOCHA"};
-List<string> misGrifos = new List<string> { "BRASIL", "VIRU" };
+List<string> misGrifos = listaGrifosProcesar
+    .Where(g => !string.IsNullOrEmpty(g.Grifo))
+    .Select(g => g.Grifo!)
+    .Distinct()
+    .ToList();
 
-List<string> misFECHAS = new List<string> { "1/01/2026", "2/01/2026", "3/01/2026" };
+List<string> misFECHAS = listaGrifosProcesar
+    .SelectMany(g => g.ListVenta)
+    .Where(v => !string.IsNullOrEmpty(v.Dia))
+    .Select(v => v.Dia!)
+    .Distinct()
+    .ToList();
 
 List<ExcelDataWrite.HojaGrifoMapeada> listaMapeada = escritorExcel.MapearEstructuraMaestro(misGrifos);
 
@@ -28,7 +37,15 @@ foreach (string auto in misGrifos)
     {
         Console.WriteLine($"[✓] Grifo encontrado instantáneamente en la hoja: {miGrifo.Hoja}");
 
-        foreach (string mFECHAS in misFECHAS)
+        var fechasDelGrifo = listaGrifosProcesar
+            .Where(g => g.Grifo == grifoObjetivo)
+            .SelectMany(g => g.ListVenta)
+            .Where(v => !string.IsNullOrEmpty(v.Dia))
+            .Select(v => v.Dia!)
+            .Distinct()
+            .ToList();
+
+        foreach (string mFECHAS in fechasDelGrifo)
         {
             string fechaABuscar = mFECHAS;
 
