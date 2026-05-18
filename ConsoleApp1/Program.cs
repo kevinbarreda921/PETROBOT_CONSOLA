@@ -34,8 +34,7 @@ var diccionarioGrifos = listaMapeada.ToDictionary(
 string rutaProyecto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
 string rutaExcel = Path.Combine(rutaProyecto, "ArchivosExcel", "Registro_ventas", "REGISTRO VENTAS -  2026- 01.xlsx");
 
-Console.WriteLine("Cargando configuración de escritura y abriendo archivo Excel maestro...");
-var configEscritura = ExcelDataWrite.CargarConfiguracionEscritura();
+Console.WriteLine("Abriendo archivo Excel maestro...");
 using var workbook = new XLWorkbook(rutaExcel);
 
 foreach (string auto in misGrifos)
@@ -62,7 +61,9 @@ foreach (string auto in misGrifos)
             .ToList();
 
         // Obtener configuración de columnas para este grifo
-        configEscritura.MapeoEscritura.TryGetValue(grifoObjetivo, out var configColumnas);
+        excel_data_reader_parallel.ConfigGlobal.Grifos.TryGetValue(grifoObjetivo, out var configGrifoRoot);
+        var configColumnas = configGrifoRoot?.Escritura;
+        var configClientes = configGrifoRoot?.FilasClientesCreditos;
 
         foreach (string mFECHAS in fechasDelGrifo)
         {
@@ -78,6 +79,11 @@ foreach (string auto in misGrifos)
                     if (ventaParaEscribir != null)
                     {
                         escritorExcel.EscribirFila(hojaClosedXML, ventaParaEscribir, filaDestino, configColumnas.Columnas);
+                        
+                        if (configClientes != null && configClientes.Count > 0)
+                        {
+                            escritorExcel.EscribirClientesCredito(hojaClosedXML, ventaParaEscribir, filaDestino, configClientes, grifoObjetivo);
+                        }
                     }
                 }
                 else

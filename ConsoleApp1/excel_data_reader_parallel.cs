@@ -14,6 +14,13 @@ public class excel_data_reader_parallel
 
     public class GrifoConfig
     {
+        public LecturaConfig? Lectura { get; set; }
+        public EscrituraConfig? Escritura { get; set; }
+        public Dictionary<string, string>? FilasClientesCreditos { get; set; }
+    }
+
+    public class LecturaConfig
+    {
         public int ColumnaFecha { get; set; } = 14;
         public int ColumnaTotales { get; set; } = 15;
         public int ColumnaCreditoNombre { get; set; } = 0;
@@ -25,7 +32,12 @@ public class excel_data_reader_parallel
         public List<int> FilasVariaciones { get; set; } = new();
     }
 
-    private static ConfigRoot _configGlobal = new();
+    public class EscrituraConfig
+    {
+        public Dictionary<string, string> Columnas { get; set; } = new();
+    }
+
+    public static ConfigRoot ConfigGlobal { get; private set; } = new();
 
     static excel_data_reader_parallel()
     {
@@ -42,7 +54,7 @@ public class excel_data_reader_parallel
             try
             {
                 string jsonTexto = File.ReadAllText(rutaConfig);
-                _configGlobal = JsonSerializer.Deserialize<ConfigRoot>(jsonTexto) ?? new ConfigRoot();
+                ConfigGlobal = JsonSerializer.Deserialize<ConfigRoot>(jsonTexto) ?? new ConfigRoot();
             }
             catch (Exception ex)
             {
@@ -72,7 +84,7 @@ public class excel_data_reader_parallel
             .ToDictionary(p => p.Name, p => p, StringComparer.Ordinal);
 
         // Extraemos el listado de llaves configuradas en el JSON
-        var listadoClavesGrifos = _configGlobal.Grifos.Keys.ToList();
+        var listadoClavesGrifos = ConfigGlobal.Grifos.Keys.ToList();
 
         Parallel.ForEach(archivos, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, (ruta) =>
         {
@@ -91,7 +103,13 @@ public class excel_data_reader_parallel
                 }
 
                 // Recuperamos la configuración correspondiente de la clave detectada
-                var configGrifo = _configGlobal.Grifos[nombreGrifoDetectado];
+                var configGrifoRoot = ConfigGlobal.Grifos[nombreGrifoDetectado];
+                var configGrifo = configGrifoRoot.Lectura;
+
+                if (configGrifo == null)
+                {
+                    return;
+                }
 
                 // Construimos los HashSets dinámicos
                 var filasDeseadas = new HashSet<int>(configGrifo.MapeoFilas.Keys.Select(int.Parse));

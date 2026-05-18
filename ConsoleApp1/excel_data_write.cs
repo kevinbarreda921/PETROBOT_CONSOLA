@@ -24,26 +24,7 @@ namespace ConsoleApp1
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         }
 
-        public class ConfigEscrituraRoot
-        {
-            public Dictionary<string, GrifoEscrituraConfig> MapeoEscritura { get; set; } = new();
-        }
 
-        public class GrifoEscrituraConfig
-        {
-            public Dictionary<string, string> Columnas { get; set; } = new();
-        }
-
-        public static ConfigEscrituraRoot CargarConfiguracionEscritura()
-        {
-            string rutaConfig = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "config_escritura_grifos.json"));
-            if (File.Exists(rutaConfig))
-            {
-                string jsonTexto = File.ReadAllText(rutaConfig);
-                return JsonSerializer.Deserialize<ConfigEscrituraRoot>(jsonTexto) ?? new ConfigEscrituraRoot();
-            }
-            return new ConfigEscrituraRoot();
-        }
 
         public void EscribirFila(IXLWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> columnas)
         {
@@ -94,6 +75,52 @@ namespace ConsoleApp1
             }
         }
 
+        public void EscribirClientesCredito(IXLWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> filasClientesCreditos, string grifoObjetivo)
+        {
+            if (venta.ListClienteCredito == null || venta.ListClienteCredito.Count == 0) return;
+
+            // Invertir diccionario para buscar por Nombre de Cliente (Key = Nombre, Value = Columna Letra)
+            var clienteAColumna = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            foreach (var kvp in filasClientesCreditos)
+            {
+                if (!string.IsNullOrWhiteSpace(kvp.Value))
+                {
+                    clienteAColumna[kvp.Value.Trim()] = kvp.Key.Trim();
+                }
+            }
+
+            foreach (var cliente in venta.ListClienteCredito)
+            {
+                string nombreLimpio = cliente.Cliente?.Trim() ?? "";
+                if (string.IsNullOrEmpty(nombreLimpio)) continue;
+
+                if (clienteAColumna.TryGetValue(nombreLimpio, out string? columnaLetra) && !string.IsNullOrWhiteSpace(columnaLetra))
+                {
+                    var valor = cliente.Monto;
+                    if (valor != null)
+                    {
+                        if (valor is decimal decValor)
+                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = decValor;
+                        else if (valor is double dblValor)
+                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = dblValor;
+                        else if (valor is int intValor)
+                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = intValor;
+                        else
+                        {
+                            if (decimal.TryParse(valor.ToString(), out decimal parsedDec))
+                                hoja.Cell($"{columnaLetra}{filaDestino}").Value = parsedDec;
+                            else
+                                hoja.Cell($"{columnaLetra}{filaDestino}").Value = valor.ToString();
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"[!] El cliente '{nombreLimpio}' no existe en la configuración JSON del grifo {grifoObjetivo}");
+                }
+            }
+        }
+
         public List<HojaGrifoMapeada> MapearEstructuraMaestro(List<string> nombresGrifos)
         {
             string rutaMaestro = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
@@ -122,7 +149,7 @@ namespace ConsoleApp1
 
                         if (string.IsNullOrEmpty(valorRaw)) continue;
 
-                        string valorCelda = valorRaw.Replace(" 00:00:00", "").Trim();
+                        string valorCelda = valorRaw.Replace("12:00:00 a. m.", "").Trim();
 
                         if (valorCelda.StartsWith("TOTAL", StringComparison.OrdinalIgnoreCase))
                         {
