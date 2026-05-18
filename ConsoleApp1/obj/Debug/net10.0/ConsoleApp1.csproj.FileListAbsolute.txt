@@ -174,3 +174,8 @@ C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\refint\ConsoleApp1.
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.pdb
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ConsoleApp1.genruntimeconfig.cache
 C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\obj\Debug\net10.0\ref\ConsoleApp1.dll
+C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\bin\Debug\net10.0\ClosedXML.dll
+C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\bin\Debug\net10.0\ClosedXML.Parser.dll
+C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\bin\Debug\net10.0\ExcelNumberFormat.dll
+C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\bin\Debug\net10.0\RBush.dll
+C:\ProyectNet\PETROBOT_CONSOLA\ConsoleApp1\bin\Debug\net10.0\SixLabors.Fonts.dll

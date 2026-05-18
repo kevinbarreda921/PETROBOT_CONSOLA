@@ -129,8 +129,8 @@ public class excel_data_reader_parallel
                             var fecha_hoja = reader.GetValue(colLetraTotales);
                             if (fecha_hoja != null)
                             {
-                                if (fecha_hoja is DateTime dt) registro.Dia = dt.ToString("dd/MM/yyyy");
-                                else if (DateTime.TryParse(fecha_hoja.ToString(), out DateTime parsedDate)) registro.Dia = parsedDate.ToString("dd/MM/yyyy");
+                                if (fecha_hoja is DateTime dt) registro.Dia = dt.ToString("d/MM/yyyy");
+                                else if (DateTime.TryParse(fecha_hoja.ToString(), out DateTime parsedDate)) registro.Dia = parsedDate.ToString("d/MM/yyyy");
                                 else
                                 {
                                     string rawFecha = fecha_hoja.ToString() ?? "";

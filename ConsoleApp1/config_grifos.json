@@ -20,7 +20,40 @@
         "29": "Gastos",
         "31": "Ventas_con_transferencia"
       },
-      "FilasVariaciones": [ 21, 22, 23, 24, 25 ]
+      "FilasVariaciones": [
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    "PUENTE": {
+      "ColumnaFecha": 14,
+      "ColumnaTotales": 15,
+      "ColumnaCreditoNombre": 0,
+      "ColumnaCreditoMonto": 6,
+      "ColumnaVariaCombusNombre": 16,
+      "ColumnaVariaCombusMonto": 18,
+      "ColumnaTablaHermes": 14,
+      "MapeoFilas": {
+        "8": "Venta_GPL",
+        "9": "Venta_GNV",
+        "11": "Total_venta_acumulada",
+        "16": "Total_Tarjeta_de_Credito_Liquidos",
+        "17": "Total_Tarjeta_de_Credito_GLP",
+        "18": "Total_Tarjeta_de_Credito_GNV",
+        "26": "ErrorMaquina",
+        "27": "Recaudo_Cofide_GNV",
+        "28": "Gastos",
+        "30": "Ventas_con_transferencia"
+      },
+      "FilasVariaciones": [
+        20,
+        21,
+        22,
+        23
+      ]
     },
     "EstacionSur": {
       "MapeoFilas": {
@@ -28,7 +61,10 @@
         "6": "Venta_GNV",
         "10": "Total_venta_acumulada"
       },
-      "FilasVariaciones": [ 14, 15 ]
+      "FilasVariaciones": [
+        14,
+        15
+      ]
     }
   }
 }

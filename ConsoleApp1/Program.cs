@@ -1,6 +1,8 @@
 using ConsoleApp1;
 using System.Diagnostics;
 using System.Text.Json;
+using ClosedXML.Excel;
+using System.IO;
 
 
 Stopwatch timerGlobal = Stopwatch.StartNew();
@@ -29,6 +31,13 @@ var diccionarioGrifos = listaMapeada.ToDictionary(
     g => g,
     StringComparer.OrdinalIgnoreCase
 );
+string rutaProyecto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
+string rutaExcel = Path.Combine(rutaProyecto, "ArchivosExcel", "Registro_ventas", "REGISTRO VENTAS -  2026- 01.xlsx");
+
+Console.WriteLine("Cargando configuración de escritura y abriendo archivo Excel maestro...");
+var configEscritura = ExcelDataWrite.CargarConfiguracionEscritura();
+using var workbook = new XLWorkbook(rutaExcel);
+
 foreach (string auto in misGrifos)
 {
     string grifoObjetivo = auto;
@@ -37,13 +46,23 @@ foreach (string auto in misGrifos)
     {
         Console.WriteLine($"[✓] Grifo encontrado instantáneamente en la hoja: {miGrifo.Hoja}");
 
-        var fechasDelGrifo = listaGrifosProcesar
-            .Where(g => g.Grifo == grifoObjetivo)
-            .SelectMany(g => g.ListVenta)
+        if (!workbook.TryGetWorksheet(miGrifo.Hoja, out var hojaClosedXML))
+        {
+            Console.WriteLine($"[x] No se pudo abrir la hoja {miGrifo.Hoja} con ClosedXML.");
+            continue;
+        }
+
+        var archivoGrifoActual = listaGrifosProcesar.FirstOrDefault(g => g.Grifo == grifoObjetivo);
+        if (archivoGrifoActual == null) continue;
+
+        var fechasDelGrifo = archivoGrifoActual.ListVenta
             .Where(v => !string.IsNullOrEmpty(v.Dia))
             .Select(v => v.Dia!)
             .Distinct()
             .ToList();
+
+        // Obtener configuración de columnas para este grifo
+        configEscritura.MapeoEscritura.TryGetValue(grifoObjetivo, out var configColumnas);
 
         foreach (string mFECHAS in fechasDelGrifo)
         {
@@ -51,16 +70,32 @@ foreach (string auto in misGrifos)
 
             if (miGrifo.MapaFechasFilas.TryGetValue(fechaABuscar, out int filaDestino))
             {
-                Console.WriteLine($"[✓] La fecha {fechaABuscar} está en la FILA: {filaDestino}");
+                Console.WriteLine($"[✓] Escribiendo datos de la fecha {fechaABuscar} en la FILA: {filaDestino}");
+
+                if (configColumnas != null)
+                {
+                    var ventaParaEscribir = archivoGrifoActual.ListVenta.FirstOrDefault(v => v.Dia == fechaABuscar);
+                    if (ventaParaEscribir != null)
+                    {
+                        escritorExcel.EscribirFila(hojaClosedXML, ventaParaEscribir, filaDestino, configColumnas.Columnas);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"[!] No se encontró mapeo de escritura para el grifo: {grifoObjetivo}");
+                }
             }
             else
             {
-                Console.WriteLine($"[x] La fecha {fechaABuscar} NO EXISTE");
+                Console.WriteLine($"[x] La fecha {fechaABuscar} NO EXISTE en el Maestro");
             }
         }
-
     }
 }
+
+Console.WriteLine("Guardando archivo Excel...");
+workbook.Save();
+Console.WriteLine($"[✓] Archivo Excel guardado correctamente.");
 timerGlobal.Stop();
 
 Console.WriteLine("\n" + new string('=', 30));

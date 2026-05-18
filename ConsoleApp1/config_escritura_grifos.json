@@ -8,16 +8,36 @@
         "Total_Tarjeta_de_Credito_Liquidos": "AO",
         "Total_Tarjeta_de_Credito_GLP": "AP",
         "Total_Tarjeta_de_Credito_GNV": "AQ",
-        "ErrorMaquina": "AR",
+        "ErrorMaquina": "",
         "Recaudo_Cofide_GNV": "F",
         "Gastos": "BY",
         "Ventas_con_transferencia": "AY",
-        "DescuentoLiquidos": "AO",
-        "DescuentoGLP": "AP",
+        "DescuentoLiquidos": "",
+        "DescuentoGLP": "",
         "Hermes_monto_liquido": "AX",
         "Hermes_monto_GLP": "BD",
         "Hermes_monto_GNV1": "BE",
         "Hermes_monto_GNV2": "BF"
+      }
+    },
+    "PUENTE": {
+      "Columnas": {
+        "Venta_GPL": "D",
+        "Venta_GNV": "",
+        "Total_venta_acumulada": "C",
+        "Total_Tarjeta_de_Credito_Liquidos": "AK",
+        "Total_Tarjeta_de_Credito_GLP": "AL",
+        "Total_Tarjeta_de_Credito_GNV": "",
+        "ErrorMaquina": "AR",
+        "Recaudo_Cofide_GNV": "",
+        "Gastos": "BN",
+        "Ventas_con_transferencia": "AP",
+        "DescuentoLiquidos": "AO",
+        "DescuentoGLP": "AP",
+        "Hermes_monto_liquido": "AT",
+        "Hermes_monto_GLP": "BA",
+        "Hermes_monto_GNV1": "",
+        "Hermes_monto_GNV2": ""
       }
     },
     "VIRU": {
