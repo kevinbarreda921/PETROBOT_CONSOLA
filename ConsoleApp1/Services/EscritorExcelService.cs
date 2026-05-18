@@ -1,31 +1,16 @@
+using ClosedXML.Excel;
+using ConsoleApp1.Models;
+using ExcelDataReader;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using ExcelDataReader;
-using ClosedXML.Excel;
-using System.Text.Json;
 using System.Reflection;
 
-namespace ConsoleApp1
+namespace ConsoleApp1.Services
 {
-    public class ExcelDataWrite
+    public class EscritorExcelService
     {
-        public class HojaGrifoMapeada
-        {
-            public string? Grifo { get; set; }
-            public string? Hoja { get; set; }
-            public Dictionary<string, int> MapaFechasFilas { get; set; } = new();
-        }
-
-        static ExcelDataWrite()
-        {
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-        }
-
-
-
         public void EscribirFila(IXLWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> columnas)
         {
             var cachePropiedades = typeof(VentaDTO)
@@ -40,7 +25,7 @@ namespace ConsoleApp1
                 if (!string.IsNullOrWhiteSpace(columnaLetra) && cachePropiedades.TryGetValue(nombrePropiedad, out PropertyInfo? propiedad))
                 {
                     var valor = propiedad.GetValue(venta);
-                    
+
                     // Lógica especial para Total_venta_acumulada solicitada
                     if (nombrePropiedad == "Total_venta_acumulada" && valor != null)
                     {
@@ -52,7 +37,7 @@ namespace ConsoleApp1
                         {
                             string colGlp = columnas.TryGetValue("Venta_GPL", out string? cg) && !string.IsNullOrWhiteSpace(cg) ? $"{cg}{filaDestino}" : "0";
                             string colGnv = columnas.TryGetValue("Venta_GNV", out string? cn) && !string.IsNullOrWhiteSpace(cn) ? $"{cn}{filaDestino}" : "0";
-                            
+
                             string strTotal = totalVenta.ToString(System.Globalization.CultureInfo.InvariantCulture);
                             hoja.Cell($"{columnaLetra}{filaDestino}").FormulaA1 = $"{strTotal}-{colGlp}-{colGnv}";
                         }
@@ -61,7 +46,6 @@ namespace ConsoleApp1
 
                     if (valor != null)
                     {
-                        // Convertir a string u otro tipo base si es necesario, ClosedXML maneja bien tipos primitivos.
                         if (valor is decimal decValor)
                             hoja.Cell($"{columnaLetra}{filaDestino}").Value = decValor;
                         else if (valor is double dblValor)
@@ -79,7 +63,6 @@ namespace ConsoleApp1
         {
             if (venta.ListClienteCredito == null || venta.ListClienteCredito.Count == 0) return;
 
-            // Invertir diccionario para buscar por Nombre de Cliente (Key = Nombre, Value = Columna Letra)
             var clienteAColumna = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
             foreach (var kvp in filasClientesCreditos)
             {
@@ -121,11 +104,8 @@ namespace ConsoleApp1
             }
         }
 
-        public List<HojaGrifoMapeada> MapearEstructuraMaestro(List<string> nombresGrifos)
+        public List<HojaGrifoMapeada> MapearEstructuraMaestro(string rutaExcel, List<string> nombresGrifos)
         {
-            string rutaMaestro = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
-            string rutaExcel = Path.Combine(rutaMaestro, "ArchivosExcel", "Registro_ventas", "REGISTRO VENTAS -  2026- 01.xlsx");
-
             var resultados = new List<HojaGrifoMapeada>();
 
             using var stream = File.Open(rutaExcel, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -163,12 +143,9 @@ namespace ConsoleApp1
                     }
                     resultados.Add(mapeoHoja);
                 }
-            } while (reader.NextResult()); 
+            } while (reader.NextResult());
 
             return resultados;
         }
-
-
     }
-
 }
