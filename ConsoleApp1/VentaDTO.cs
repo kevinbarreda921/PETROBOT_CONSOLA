@@ -7,7 +7,7 @@ namespace ConsoleApp1
 
     public  class VentaDTO
     {
-        public string? Archivo { get; set; }
+
         public string? Hoja { get; set; }
         public string? Dia { get; set; }
         public object? Venta_GPL { get; set; }
@@ -39,7 +39,6 @@ namespace ConsoleApp1
 
         // Constructor con parámetros
         public VentaDTO(
-            string? archivo = null,
             string? hoja = null,
             object? venta_GPL = null,
             object? venta_GNV = null,
@@ -59,7 +58,6 @@ namespace ConsoleApp1
             decimal hermes_monto_GNV2 = 0
             )
         {
-            Archivo = archivo;
             Hoja = hoja;
             Venta_GPL = venta_GPL;
             Venta_GNV = venta_GNV;

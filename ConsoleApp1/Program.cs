@@ -1,33 +1,67 @@
 ﻿using ConsoleApp1;
-//195
+using System.Diagnostics;
+using System.Text.Json;
+
+//excel_data_reader_parallel.f_excel_data_reader_parallel();
+
+Stopwatch timerGlobal = Stopwatch.StartNew();
+
+var escritorExcel = new ExcelDataWrite();
+
+//List<string> misGrifos = new List<string> { "BRASIL", "VIRU", "chILCA","PUENTE","MAKITA","SAN PABLO","HUANCHACO","ENACE","ACAPULCO","CATACAOS","TULIS","SAN MARCOS","MARIA", "VELITA","QUISTOCOCHA"};
+List<string> misGrifos = new List<string> { "BRASIL", "VIRU" };
+
+List<string> misFECHAS = new List<string> { "1/01/2026", "2/01/2026", "3/01/2026" };
+
+List<ExcelDataWrite.HojaGrifoMapeada> listaMapeada = escritorExcel.MapearEstructuraMaestro(misGrifos);
+
+var diccionarioGrifos = listaMapeada.ToDictionary(
+    g => g.Grifo ?? "SIN_NOMBRE",
+    g => g,
+    StringComparer.OrdinalIgnoreCase
+);
+foreach (string auto in misGrifos)
+{
+    string grifoObjetivo = auto;
+
+    if (diccionarioGrifos.TryGetValue(grifoObjetivo, out var miGrifo))
+    {
+        Console.WriteLine($"[✓] Grifo encontrado instantáneamente en la hoja: {miGrifo.Hoja}");
+
+        foreach (string mFECHAS in misFECHAS)
+        {
+            string fechaABuscar = mFECHAS;
+
+            if (miGrifo.MapaFechasFilas.TryGetValue(fechaABuscar, out int filaDestino))
+            {
+                Console.WriteLine($"[✓] La fecha {fechaABuscar} está en la FILA: {filaDestino}");
+            }
+            else
+            {
+                Console.WriteLine($"[x] La fecha {fechaABuscar} NO EXISTE");
+            }
+        }
+
+    }
+}
+timerGlobal.Stop();
+
+Console.WriteLine("\n" + new string('=', 30));
+Console.WriteLine($"PROCESO FINALIZADO");
+Console.WriteLine($"Tiempo total: {timerGlobal.Elapsed.TotalSeconds:F2} segundos");
+Console.WriteLine(new string('=', 30));
 
 
+//// 2. Configurar la serialización para que sea legible (Indented)
+//var opcionesJson = new JsonSerializerOptions
+//{
+//    WriteIndented = true // Esto le da formato de escalera al texto para que sea fácil de leer
+//};
 
-//eppplus_solo.f_eppplus_solo(); // Tiempo total: 2.75 segundos  // 17.92
+//// 3. Convertir la lista a una cadena JSON
+//string jsonResultado = JsonSerializer.Serialize(estructuraMapeada, opcionesJson);
 
-// eppplus_parallel.f_eppplus_parallel();//Tiempo total: 1.64 segundos // 16.16
-
-excel_data_reader_parallel.f_excel_data_reader_parallel();// 1.95 a 2.08
-
-//excel_data_reader_parallel_gemini.f_excel_data_reader_parallel_gemini();// 0.06 a 0.15
-
-//excel_data_reader_parallel_gemini_mejora_backup.f_excel_data_reader_parallel_gemini_mejora_backup();// 0.4 a 0.15
-//excel_data_reader_parallel_gemini_mejora.f_excel_data_reader_parallel_gemini_mejora();// 0.4 a 0.15
-
-
-//excel_data_reader_parallel_deepseek.f_excel_data_reader_parallel_deepseek();// 1.90 a 2.08 con mejora 0.30 a 0.37
-
-//excel_data_reader_parallel_claude.f_excel_data_reader_parallel_claude();// 
-//excel_data_reader_parallel_claude_mejora.f_excel_data_reader_parallel_claude_mejora();// 0.12
-
-
-//excel_data_reader_parallel_chatgpt.Ejecutar();// 
-
-//excel_data_reader_parallel_chatgpt_mejora.Ejecutar();// 
-
-
-
-
-
-
+//// 4. Imprimir en la consola
+//Console.WriteLine("=== ESTRUCTURA DE EXCEL MAESTRO MAPEADA ===");
+//Console.WriteLine(jsonResultado);
 
