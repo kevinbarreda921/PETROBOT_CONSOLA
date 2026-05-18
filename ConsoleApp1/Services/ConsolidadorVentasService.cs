@@ -59,11 +59,11 @@ namespace ConsoleApp1.Services
                 
                 if (hojaEPPlus == null)
                 {
-                    Console.WriteLine($"[x] No se encontró ninguna hoja para el grifo {grifoObjetivo} en EPPlus.");
+                    LoggerService.Error(grifoObjetivo, "MAESTRO", $"No se encontró ninguna hoja para el grifo {grifoObjetivo} en EPPlus.");
                     continue;
                 }
 
-                Console.WriteLine($"[✓] Grifo '{grifoObjetivo}' encontrado instantáneamente en la hoja: {hojaEPPlus.Name}");
+                // LoggerService.Info(grifoObjetivo, archivoGrifoActual.Archivo, $"Hoja encontrada y lista para procesar.");
                 
                 // Mapeamos las filas de fechas directamente desde memoria (sin leer el archivo de nuevo)
                 var mapaFechasFilas = _escritor.MapearFechasHoja(hojaEPPlus);
@@ -96,7 +96,7 @@ namespace ConsoleApp1.Services
                     {
                         if (mapaFechasFilas.TryGetValue(fechaABuscar, out int filaDestino))
                         {
-                            Console.WriteLine($"[✓] Escribiendo datos de la fecha {fechaABuscar} en la FILA: {filaDestino}");
+                            LoggerService.Info(grifoObjetivo, archivoGrifoActual.Archivo, $"dia {fechaABuscar} procesado correctamente");
 
                             if (configColumnas != null)
                             {
@@ -107,7 +107,7 @@ namespace ConsoleApp1.Services
                                     
                                     if (clienteAColumna.Count > 0)
                                     {
-                                        _escritor.EscribirClientesCredito(hojaEPPlus, ventaParaEscribir, filaDestino, clienteAColumna, grifoObjetivo);
+                                        _escritor.EscribirClientesCredito(hojaEPPlus, ventaParaEscribir, filaDestino, clienteAColumna, grifoObjetivo, archivoGrifoActual.Archivo ?? "DESCONOCIDO");
                                     }
                                 }
                             }

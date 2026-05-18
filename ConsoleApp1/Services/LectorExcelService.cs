@@ -38,6 +38,7 @@ namespace ConsoleApp1.Services
 
             Parallel.ForEach(archivos, new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount }, (ruta) =>
             {
+                string nombreGrifoDetectadoStr = "DESCONOCIDO";
                 try
                 {
                     string nombreArchivoCompleto = Path.GetFileNameWithoutExtension(ruta);
@@ -47,9 +48,11 @@ namespace ConsoleApp1.Services
 
                     if (nombreGrifoDetectado == null)
                     {
-                        Console.WriteLine($"[❌ ERROR] NO REGISTRADO: El archivo '{Path.GetFileName(ruta)}' no coincide con ninguna palabra clave del JSON.");
+                        LoggerService.Error("DESCONOCIDO", Path.GetFileName(ruta), $"NO REGISTRADO: El archivo a procesar no se encuentra registrado en el sistema.");
                         return;
                     }
+                    
+                    nombreGrifoDetectadoStr = nombreGrifoDetectado;
 
                     var configGrifoRoot = ConfiguracionService.ConfigGlobal.Grifos[nombreGrifoDetectado];
                     var configGrifo = configGrifoRoot.Lectura;
@@ -212,7 +215,7 @@ namespace ConsoleApp1.Services
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error procesando el archivo {Path.GetFileName(ruta)}: {ex.Message}");
+                    LoggerService.Error(nombreGrifoDetectadoStr, Path.GetFileName(ruta), $"Error leyendo el archivo: {ex.Message}");
                 }
             });
 

@@ -60,7 +60,7 @@ namespace ConsoleApp1.Services
             }
         }
 
-        public void EscribirClientesCredito(ExcelWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> clienteAColumna, string grifoObjetivo)
+        public void EscribirClientesCredito(ExcelWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> clienteAColumna, string grifoObjetivo, string archivo)
         {
             if (venta.ListClienteCredito == null || venta.ListClienteCredito.Count == 0) return;
 
@@ -91,7 +91,7 @@ namespace ConsoleApp1.Services
                 }
                 else
                 {
-                    Console.WriteLine($"[!] El cliente '{nombreLimpio}' no existe en la configuración JSON del grifo {grifoObjetivo}");
+                    LoggerService.Error(grifoObjetivo, archivo, $"El cliente '{nombreLimpio}' no existe en la configuración JSON");
                 }
             }
         }

@@ -9,6 +9,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Stopwatch timerGlobal = Stopwatch.StartNew();
+            LoggerService.LimpiarLogs();
 
             try
             {
@@ -17,7 +18,13 @@ namespace ConsoleApp1
             }
             catch (Exception ex)
             {
+                LoggerService.Error("SISTEMA", "Main", $"Ocurrió un error fatal: {ex.Message}");
                 Console.WriteLine($"[x] Ocurrió un error fatal:\n{ex.ToString()}");
+            }
+            finally
+            {
+                string rutaLog = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\", "reporte_proceso.json"));
+                LoggerService.GuardarJson(rutaLog);
             }
 
             timerGlobal.Stop();
