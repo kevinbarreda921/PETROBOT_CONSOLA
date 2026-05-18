@@ -1,4 +1,4 @@
-using ClosedXML.Excel;
+using OfficeOpenXml;
 using ConsoleApp1.Models;
 using System;
 using System.Collections.Generic;
@@ -40,32 +40,33 @@ namespace ConsoleApp1.Services
             }
             string rutaExcel = archivosExcel[0];
 
-            Console.WriteLine("Mapeando estructura del archivo Excel maestro...");
-            List<HojaGrifoMapeada> listaMapeada = _escritor.MapearEstructuraMaestro(rutaExcel, misGrifos);
+            // Eliminamos la pasada inicial redundante de ExcelDataReader
 
-            var diccionarioGrifos = listaMapeada.ToDictionary(
-                g => g.Grifo ?? "SIN_NOMBRE",
-                g => g,
-                StringComparer.OrdinalIgnoreCase
-            );
 
-            Console.WriteLine("Abriendo archivo Excel maestro...");
-            using var workbook = new XLWorkbook(rutaExcel);
+            Console.WriteLine("Abriendo archivo Excel maestro con EPPlus...");
+            ExcelPackage.License.SetNonCommercialPersonal("PETROBOT");
+            using var package = new ExcelPackage(new FileInfo(rutaExcel));
+            package.Compression = CompressionLevel.BestSpeed; // Reducir overhead de CPU al comprimir
+            var workbook = package.Workbook;
 
             foreach (string grifoObjetivo in misGrifos)
             {
-                if (diccionarioGrifos.TryGetValue(grifoObjetivo, out var miGrifo))
+                var archivoGrifoActual = listaGrifosProcesar.FirstOrDefault(g => g.Grifo == grifoObjetivo);
+                if (archivoGrifoActual == null) continue;
+
+                // Buscamos la hoja cuyo nombre contenga el grifoObjetivo de forma flexible (ignora mayúsculas)
+                var hojaEPPlus = workbook.Worksheets.FirstOrDefault(w => w.Name.IndexOf(grifoObjetivo, StringComparison.OrdinalIgnoreCase) >= 0);
+                
+                if (hojaEPPlus == null)
                 {
-                    Console.WriteLine($"[✓] Grifo encontrado instantáneamente en la hoja: {miGrifo.Hoja}");
+                    Console.WriteLine($"[x] No se encontró ninguna hoja para el grifo {grifoObjetivo} en EPPlus.");
+                    continue;
+                }
 
-                    if (!workbook.TryGetWorksheet(miGrifo.Hoja, out var hojaClosedXML))
-                    {
-                        Console.WriteLine($"[x] No se pudo abrir la hoja {miGrifo.Hoja} con ClosedXML.");
-                        continue;
-                    }
-
-                    var archivoGrifoActual = listaGrifosProcesar.FirstOrDefault(g => g.Grifo == grifoObjetivo);
-                    if (archivoGrifoActual == null) continue;
+                Console.WriteLine($"[✓] Grifo '{grifoObjetivo}' encontrado instantáneamente en la hoja: {hojaEPPlus.Name}");
+                
+                // Mapeamos las filas de fechas directamente desde memoria (sin leer el archivo de nuevo)
+                var mapaFechasFilas = _escritor.MapearFechasHoja(hojaEPPlus);
 
                     var fechasDelGrifo = archivoGrifoActual.ListVenta
                         .Where(v => !string.IsNullOrEmpty(v.Dia))
@@ -78,9 +79,22 @@ namespace ConsoleApp1.Services
                     var configColumnas = configGrifoRoot?.Escritura;
                     var configClientes = configGrifoRoot?.FilasClientesCreditos;
 
+                    // Invertir diccionario de clientes una sola vez por Grifo
+                    var clienteAColumna = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+                    if (configClientes != null)
+                    {
+                        foreach (var kvp in configClientes)
+                        {
+                            if (!string.IsNullOrWhiteSpace(kvp.Value))
+                            {
+                                clienteAColumna[kvp.Value.Trim()] = kvp.Key.Trim();
+                            }
+                        }
+                    }
+
                     foreach (string fechaABuscar in fechasDelGrifo)
                     {
-                        if (miGrifo.MapaFechasFilas.TryGetValue(fechaABuscar, out int filaDestino))
+                        if (mapaFechasFilas.TryGetValue(fechaABuscar, out int filaDestino))
                         {
                             Console.WriteLine($"[✓] Escribiendo datos de la fecha {fechaABuscar} en la FILA: {filaDestino}");
 
@@ -89,11 +103,11 @@ namespace ConsoleApp1.Services
                                 var ventaParaEscribir = archivoGrifoActual.ListVenta.FirstOrDefault(v => v.Dia == fechaABuscar);
                                 if (ventaParaEscribir != null)
                                 {
-                                    _escritor.EscribirFila(hojaClosedXML, ventaParaEscribir, filaDestino, configColumnas.Columnas);
+                                    _escritor.EscribirFila(hojaEPPlus, ventaParaEscribir, filaDestino, configColumnas.Columnas);
                                     
-                                    if (configClientes != null && configClientes.Count > 0)
+                                    if (clienteAColumna.Count > 0)
                                     {
-                                        _escritor.EscribirClientesCredito(hojaClosedXML, ventaParaEscribir, filaDestino, configClientes, grifoObjetivo);
+                                        _escritor.EscribirClientesCredito(hojaEPPlus, ventaParaEscribir, filaDestino, clienteAColumna, grifoObjetivo);
                                     }
                                 }
                             }
@@ -107,11 +121,10 @@ namespace ConsoleApp1.Services
                             Console.WriteLine($"[x] La fecha {fechaABuscar} NO EXISTE en el Maestro para el grifo {grifoObjetivo}");
                         }
                     }
-                }
             }
 
             Console.WriteLine("Guardando archivo Excel...");
-            workbook.Save();
+            package.Save();
             Console.WriteLine($"[✓] Archivo Excel guardado correctamente.");
         }
     }

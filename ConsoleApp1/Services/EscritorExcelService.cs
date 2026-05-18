@@ -1,4 +1,4 @@
-using ClosedXML.Excel;
+using OfficeOpenXml;
 using ConsoleApp1.Models;
 using ExcelDataReader;
 using System;
@@ -11,18 +11,19 @@ namespace ConsoleApp1.Services
 {
     public class EscritorExcelService
     {
-        public void EscribirFila(IXLWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> columnas)
+        private static readonly Dictionary<string, PropertyInfo> _cachePropiedades = typeof(VentaDTO)
+            .GetProperties(BindingFlags.Public | BindingFlags.Instance)
+            .ToDictionary(p => p.Name, p => p, StringComparer.Ordinal);
+
+        public void EscribirFila(ExcelWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> columnas)
         {
-            var cachePropiedades = typeof(VentaDTO)
-                .GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                .ToDictionary(p => p.Name, p => p, StringComparer.Ordinal);
 
             foreach (var kvp in columnas)
             {
                 string nombrePropiedad = kvp.Key;
                 string columnaLetra = kvp.Value;
 
-                if (!string.IsNullOrWhiteSpace(columnaLetra) && cachePropiedades.TryGetValue(nombrePropiedad, out PropertyInfo? propiedad))
+                if (!string.IsNullOrWhiteSpace(columnaLetra) && _cachePropiedades.TryGetValue(nombrePropiedad, out PropertyInfo? propiedad))
                 {
                     var valor = propiedad.GetValue(venta);
 
@@ -39,7 +40,7 @@ namespace ConsoleApp1.Services
                             string colGnv = columnas.TryGetValue("Venta_GNV", out string? cn) && !string.IsNullOrWhiteSpace(cn) ? $"{cn}{filaDestino}" : "0";
 
                             string strTotal = totalVenta.ToString(System.Globalization.CultureInfo.InvariantCulture);
-                            hoja.Cell($"{columnaLetra}{filaDestino}").FormulaA1 = $"{strTotal}-{colGlp}-{colGnv}";
+                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Formula = $"{strTotal}-{colGlp}-{colGnv}";
                         }
                         continue;
                     }
@@ -47,30 +48,21 @@ namespace ConsoleApp1.Services
                     if (valor != null)
                     {
                         if (valor is decimal decValor)
-                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = decValor;
+                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = decValor;
                         else if (valor is double dblValor)
-                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = dblValor;
+                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = dblValor;
                         else if (valor is int intValor)
-                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = intValor;
+                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = intValor;
                         else
-                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = valor.ToString();
+                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
                     }
                 }
             }
         }
 
-        public void EscribirClientesCredito(IXLWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> filasClientesCreditos, string grifoObjetivo)
+        public void EscribirClientesCredito(ExcelWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> clienteAColumna, string grifoObjetivo)
         {
             if (venta.ListClienteCredito == null || venta.ListClienteCredito.Count == 0) return;
-
-            var clienteAColumna = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-            foreach (var kvp in filasClientesCreditos)
-            {
-                if (!string.IsNullOrWhiteSpace(kvp.Value))
-                {
-                    clienteAColumna[kvp.Value.Trim()] = kvp.Key.Trim();
-                }
-            }
 
             foreach (var cliente in venta.ListClienteCredito)
             {
@@ -83,17 +75,17 @@ namespace ConsoleApp1.Services
                     if (valor != null)
                     {
                         if (valor is decimal decValor)
-                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = decValor;
+                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = decValor;
                         else if (valor is double dblValor)
-                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = dblValor;
+                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = dblValor;
                         else if (valor is int intValor)
-                            hoja.Cell($"{columnaLetra}{filaDestino}").Value = intValor;
+                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = intValor;
                         else
                         {
                             if (decimal.TryParse(valor.ToString(), out decimal parsedDec))
-                                hoja.Cell($"{columnaLetra}{filaDestino}").Value = parsedDec;
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = parsedDec;
                             else
-                                hoja.Cell($"{columnaLetra}{filaDestino}").Value = valor.ToString();
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
                         }
                     }
                 }
@@ -104,48 +96,34 @@ namespace ConsoleApp1.Services
             }
         }
 
-        public List<HojaGrifoMapeada> MapearEstructuraMaestro(string rutaExcel, List<string> nombresGrifos)
+        public Dictionary<string, int> MapearFechasHoja(ExcelWorksheet hoja)
         {
-            var resultados = new List<HojaGrifoMapeada>();
+            var mapaFechasFilas = new Dictionary<string, int>();
 
-            using var stream = File.Open(rutaExcel, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            using var reader = ExcelReaderFactory.CreateReader(stream);
+            if (hoja.Dimension == null) return mapaFechasFilas;
 
-            do
+            int maxRow = hoja.Dimension.End.Row;
+
+            for (int filaActual = 1; filaActual <= maxRow; filaActual++)
             {
-                string nombreHojaMin = reader.Name.ToLower();
-                string? grifoMatch = nombresGrifos.FirstOrDefault(g => nombreHojaMin.Contains(g.ToLower()));
+                var valorRaw = hoja.Cells[filaActual, 2].Value?.ToString();
 
-                if (grifoMatch != null)
+                if (string.IsNullOrEmpty(valorRaw)) continue;
+
+                string valorCelda = valorRaw.Replace("12:00:00 a. m.", "").Trim();
+
+                if (valorCelda.StartsWith("TOTAL", StringComparison.OrdinalIgnoreCase))
                 {
-                    var mapeoHoja = new HojaGrifoMapeada { Grifo = grifoMatch, Hoja = reader.Name };
-                    int filaActual = 0;
-
-                    while (reader.Read())
-                    {
-                        filaActual++;
-
-                        var valorRaw = reader.GetValue(1)?.ToString();
-
-                        if (string.IsNullOrEmpty(valorRaw)) continue;
-
-                        string valorCelda = valorRaw.Replace("12:00:00 a. m.", "").Trim();
-
-                        if (valorCelda.StartsWith("TOTAL", StringComparison.OrdinalIgnoreCase))
-                        {
-                            continue;
-                        }
-
-                        if (!mapeoHoja.MapaFechasFilas.ContainsKey(valorCelda))
-                        {
-                            mapeoHoja.MapaFechasFilas.Add(valorCelda, filaActual);
-                        }
-                    }
-                    resultados.Add(mapeoHoja);
+                    continue;
                 }
-            } while (reader.NextResult());
 
-            return resultados;
+                if (!mapaFechasFilas.ContainsKey(valorCelda))
+                {
+                    mapaFechasFilas.Add(valorCelda, filaActual);
+                }
+            }
+
+            return mapaFechasFilas;
         }
     }
 }

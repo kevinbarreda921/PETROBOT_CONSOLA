@@ -17,7 +17,7 @@ namespace ConsoleApp1
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[x] Ocurrió un error fatal: {ex.Message}");
+                Console.WriteLine($"[x] Ocurrió un error fatal:\n{ex.ToString()}");
             }
 
             timerGlobal.Stop();
