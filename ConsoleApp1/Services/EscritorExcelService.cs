@@ -47,14 +47,23 @@ namespace ConsoleApp1.Services
 
                     if (valor != null)
                     {
-                        if (valor is decimal decValor)
-                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = decValor;
-                        else if (valor is double dblValor)
-                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = dblValor;
-                        else if (valor is int intValor)
-                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = intValor;
-                        else
-                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
+                        bool esCero = false;
+                        if (valor is decimal dec && dec == 0m) esCero = true;
+                        else if (valor is double dbl && dbl == 0d) esCero = true;
+                        else if (valor is int integer && integer == 0) esCero = true;
+                        else if (decimal.TryParse(valor.ToString(), out decimal parsed) && parsed == 0m) esCero = true;
+
+                        if (!esCero)
+                        {
+                            if (valor is decimal decValor)
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = decValor;
+                            else if (valor is double dblValor)
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = dblValor;
+                            else if (valor is int intValor)
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = intValor;
+                            else
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
+                        }
                     }
                 }
             }
@@ -74,18 +83,27 @@ namespace ConsoleApp1.Services
                     var valor = cliente.Monto;
                     if (valor != null)
                     {
-                        if (valor is decimal decValor)
-                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = decValor;
-                        else if (valor is double dblValor)
-                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = dblValor;
-                        else if (valor is int intValor)
-                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = intValor;
-                        else
+                        bool esCero = false;
+                        if (valor is decimal dec && dec == 0m) esCero = true;
+                        else if (valor is double dbl && dbl == 0d) esCero = true;
+                        else if (valor is int integer && integer == 0) esCero = true;
+                        else if (decimal.TryParse(valor.ToString(), out decimal parsed) && parsed == 0m) esCero = true;
+
+                        if (!esCero)
                         {
-                            if (decimal.TryParse(valor.ToString(), out decimal parsedDec))
-                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = parsedDec;
+                            if (valor is decimal decValor)
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = decValor;
+                            else if (valor is double dblValor)
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = dblValor;
+                            else if (valor is int intValor)
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = intValor;
                             else
-                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
+                            {
+                                if (decimal.TryParse(valor.ToString(), out decimal parsedDec))
+                                    hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = parsedDec;
+                                else
+                                    hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
+                            }
                         }
                     }
                 }
@@ -110,7 +128,8 @@ namespace ConsoleApp1.Services
 
                 if (string.IsNullOrEmpty(valorRaw)) continue;
 
-                string valorCelda = valorRaw.Replace("12:00:00 a. m.", "").Trim();
+                // string valorCelda = valorRaw.Replace("12:00:00 a. m.", "").Trim(); //trabajo
+                string valorCelda = valorRaw.Replace("00:00:00", "").Trim(); //casas
 
                 if (valorCelda.StartsWith("TOTAL", StringComparison.OrdinalIgnoreCase))
                 {

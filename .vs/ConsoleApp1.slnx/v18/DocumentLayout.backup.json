@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\",
+  "WorkspaceRootPath": "C:\\ProyectNet\\PETROBOT_CONSOLA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectkevin\\petrobot_consola\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectnet\\petrobot_consola\\consoleapp1\\services\\consolidadorventasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\services\\consolidadorventasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectkevin\\petrobot_consola\\consoleapp1\\config_grifos.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectnet\\petrobot_consola\\consoleapp1\\services\\escritorexcelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\services\\escritorexcelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectnet\\petrobot_consola\\consoleapp1\\reporte_proceso.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\reporte_proceso.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectnet\\petrobot_consola\\consoleapp1\\services\\lectorexcelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\services\\lectorexcelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectnet\\petrobot_consola\\consoleapp1\\config_grifos.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\config_grifos.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectkevin\\petrobot_consola\\consoleapp1\\excel_data_write.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\excel_data_write.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectkevin\\petrobot_consola\\consoleapp1\\excel_data_reader_parallel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\excel_data_reader_parallel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|c:\\proyectnet\\petrobot_consola\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B68813F-23C2-8DF2-1B1F-9033A2893F62}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,59 +33,91 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 295,
+          "DockedWidth": 200,
           "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "excel_data_write.cs",
-              "DocumentMoniker": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\ConsoleApp1\\excel_data_write.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\excel_data_write.cs",
-              "ToolTip": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\ConsoleApp1\\excel_data_write.cs",
-              "RelativeToolTip": "ConsoleApp1\\excel_data_write.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAnwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T03:50:27.004Z",
+              "Title": "reporte_proceso.json",
+              "DocumentMoniker": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\reporte_proceso.json",
+              "RelativeDocumentMoniker": "ConsoleApp1\\reporte_proceso.json",
+              "ToolTip": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\reporte_proceso.json",
+              "RelativeToolTip": "ConsoleApp1\\reporte_proceso.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-19T05:36:34.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "config_grifos.json",
-              "DocumentMoniker": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\ConsoleApp1\\config_grifos.json",
-              "RelativeDocumentMoniker": "ConsoleApp1\\config_grifos.json",
-              "ToolTip": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\ConsoleApp1\\config_grifos.json",
-              "RelativeToolTip": "ConsoleApp1\\config_grifos.json",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHMAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-17T15:15:58.267Z",
+              "Title": "EscritorExcelService.cs",
+              "DocumentMoniker": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\Services\\EscritorExcelService.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Services\\EscritorExcelService.cs",
+              "ToolTip": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\Services\\EscritorExcelService.cs",
+              "RelativeToolTip": "ConsoleApp1\\Services\\EscritorExcelService.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAhwHYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T04:20:15.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\ConsoleApp1\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\ConsoleApp1\\Program.cs",
-              "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwBAAAAAPAAAAAAAAAA==",
+              "Title": "ConsolidadorVentasService.cs",
+              "DocumentMoniker": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\Services\\ConsolidadorVentasService.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Services\\ConsolidadorVentasService.cs",
+              "ToolTip": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\Services\\ConsolidadorVentasService.cs",
+              "RelativeToolTip": "ConsoleApp1\\Services\\ConsolidadorVentasService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T15:07:38.787Z",
+              "WhenOpened": "2026-05-19T04:20:41.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "excel_data_reader_parallel.cs",
-              "DocumentMoniker": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\ConsoleApp1\\excel_data_reader_parallel.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\excel_data_reader_parallel.cs",
-              "ToolTip": "C:\\ProyectKevin\\PETROBOT_CONSOLA\\ConsoleApp1\\excel_data_reader_parallel.cs",
-              "RelativeToolTip": "ConsoleApp1\\excel_data_reader_parallel.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAowEoAAABRAAAAAAAAAA==",
+              "Title": "LectorExcelService.cs",
+              "DocumentMoniker": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\Services\\LectorExcelService.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Services\\LectorExcelService.cs",
+              "ToolTip": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\Services\\LectorExcelService.cs",
+              "RelativeToolTip": "ConsoleApp1\\Services\\LectorExcelService.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAUwIUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T03:27:39.391Z",
+              "WhenOpened": "2026-05-19T04:20:19.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T04:14:05.402Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "config_grifos.json",
+              "DocumentMoniker": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\config_grifos.json",
+              "RelativeDocumentMoniker": "ConsoleApp1\\config_grifos.json",
+              "ToolTip": "C:\\ProyectNet\\PETROBOT_CONSOLA\\ConsoleApp1\\config_grifos.json",
+              "RelativeToolTip": "ConsoleApp1\\config_grifos.json",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAACEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-19T04:50:02.593Z",
               "EditorCaption": ""
             }
           ]

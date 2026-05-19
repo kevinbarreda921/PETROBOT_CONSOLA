@@ -122,7 +122,16 @@ namespace ConsoleApp1.Services
                                 }
                             }
 
-                            if (filaActual == 15 || leyendoClientes)
+                            if (!leyendoClientes && flagclientecredito == 0 && filaActual >= 13 && filaActual <= 30)
+                            {
+                                int colLetraCreditoNombre = configGrifo.ColumnaCreditoNombre;
+                                var valorNombre = reader.GetValue(colLetraCreditoNombre);
+                                if (valorNombre != null && valorNombre.ToString()?.Trim().ToUpper().StartsWith("CLIENTE") == true)
+                                {
+                                    leyendoClientes = true;
+                                }
+                            }
+                            else if (leyendoClientes)
                             {
                                 int colLetraCreditoNombre = configGrifo.ColumnaCreditoNombre;
                                 int colLetraCreditoMonto = configGrifo.ColumnaCreditoMonto;
@@ -139,7 +148,7 @@ namespace ConsoleApp1.Services
                                     else
                                         clientesAgrupados.Add(nombreLimpio, montoActual);
 
-                                    leyendoClientes = true;
+                                    flagclientecredito = 0;
                                 }
                                 else
                                 {
@@ -162,7 +171,7 @@ namespace ConsoleApp1.Services
                                     descuentoLiquidos_Total += montoActualVariacion;
                             }
 
-                            if (filaActual >= 60 && filaActual <= 130)
+                            if (filaActual >= 55 && filaActual <= 130)
                             {
                                 int colLetraColumnaTablaHermes = configGrifo.ColumnaTablaHermes;
                                 var celdaIdentificadora = reader.GetValue(colLetraColumnaTablaHermes);

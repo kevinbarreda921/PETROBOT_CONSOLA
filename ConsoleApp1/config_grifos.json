@@ -120,7 +120,64 @@
         "N": "PETRO WORLD TRANSPORTES DEL PERU SOCIEDAD ANONIMA CERRADA",
         "H": "PETROTHOR SOCIEDAD ANONIMA CERRADA"
       }
+    },
+    "CHILCA": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "9": "Venta_GNV",
+          "11": "Total_venta_acumulada",
+          "16": "Total_Tarjeta_de_Credito_Liquidos",
+          "17": "Total_Tarjeta_de_Credito_GLP",
+          "18": "Total_Tarjeta_de_Credito_GNV",
+          "26": "ErrorMaquina",
+          "27": "Recaudo_Cofide_GNV",
+          "28": "Gastos",
+          "30": "Ventas_con_transferencia"
+        },
+        "FilasVariaciones": [
+          20,
+          21,
+          22
+        ]
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AQ",
+          "Total_Tarjeta_de_Credito_GLP": "AR",
+          "Total_Tarjeta_de_Credito_GNV": "AS",
+          "ErrorMaquina": "AY",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BZ",
+          "Ventas_con_transferencia": "BB",
+          "DescuentoLiquidos": "AU",
+          "DescuentoGLP": "AV",
+          "Hermes_monto_liquido": "BA",
+          "Hermes_monto_GLP": "BF",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "Q": "C & M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "M": "ALTAS SENDAS S.A.C.",
+        "AC": "ASOCIACION CIVIL CLUB NAUTICO POSEIDON",
+        "AE": "FIBRAPRINT S.A.C.",
+        "K": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC",
+        "AH": "POSEIDON CARGO S.A.C.",
+        "P": "FABRICACIONES ALCANTARA E.I.R.L.",
+        "N": "PETROTHOR S.A.C."
+      }
     }
-
   }
 }
