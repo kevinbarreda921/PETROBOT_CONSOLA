@@ -96,7 +96,7 @@ namespace ConsoleApp1.Services
                     {
                         if (mapaFechasFilas.TryGetValue(fechaABuscar, out int filaDestino))
                         {
-                            LoggerService.Info(grifoObjetivo, archivoGrifoActual.Archivo, $"dia {fechaABuscar} procesado correctamente");
+                            LoggerService.Info(grifoObjetivo, archivoGrifoActual.Archivo, $" El grifo {grifoObjetivo} del dia {fechaABuscar} procesado correctamente");
 
                             if (configColumnas != null)
                             {

@@ -24,7 +24,6 @@ namespace ConsoleApp1.Models.Configuracion
         public int ColumnaVariaCombusMonto { get; set; } = 18;
         public int ColumnaTablaHermes { get; set; } = 14;
         public Dictionary<string, string> MapeoFilas { get; set; } = new();
-        public List<int> FilasVariaciones { get; set; } = new();
     }
 
     public class EscrituraConfig

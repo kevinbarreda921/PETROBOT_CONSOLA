@@ -20,14 +20,7 @@
           "28": "Recaudo_Cofide_GNV",
           "29": "Gastos",
           "31": "Ventas_con_transferencia"
-        },
-        "FilasVariaciones": [
-          21,
-          22,
-          23,
-          24,
-          25
-        ]
+        }
       },
       "Escritura": {
         "Columnas": {
@@ -53,15 +46,15 @@
         "H": "COMMUNICATIONS AND SYSTEMS DEVELOPMENT SOCIEDAD ANONIMA CERRADA",
         "I": "FUERO MILITAR POLICIAL",
         "J": "ALMACENES ASOCIADOS SOCIEDAD ANONIMA CERRADA",
-        "L": "C & M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "L": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
         "M": "IMPORTACIONES HUARMEY S.A.C.-IHUASAC",
         "N": "FONDO NACIONAL DE DESARROLLO PESQUERO",
-        "O": "PROGRAMA DE EMPLEO TEMPORAL \\LLAMKASUN PERÚ\\",
+        "O": "PROGRAMA DE EMPLEO TEMPORAL \\LLAMKASUN PER\u00DA\\",
         "T": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC",
         "U": "UNIDAD EJECUTORA 004 - FONDO DE COOPERACION PARA EL DESARROLLO SOCIAL",
         "V": "MUNICIPALIDAD DE JESUS MARIA",
         "Y": "SEGURO INTEGRAL DE SALUD",
-        "AC": "INSTITUTO NACIONAL DE SALUD DEL NIñO",
+        "AC": "INSTITUTO NACIONAL DE SALUD DEL NI\u00F1O",
         "AL": "ALMACENERA MERCANTIL SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA"
       }
     },
@@ -85,13 +78,7 @@
           "27": "Recaudo_Cofide_GNV",
           "28": "Gastos",
           "30": "Ventas_con_transferencia"
-        },
-        "FilasVariaciones": [
-          20,
-          21,
-          22,
-          23
-        ]
+        }
       },
       "Escritura": {
         "Columnas": {
@@ -116,7 +103,7 @@
       "FilasClientesCreditos": {
         "K": "PUNTO GAS SOCIEDAD ANONIMA CERRADA - PUNTO GAS S.A.C.",
         "R": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC",
-        "M": "C & M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "M": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
         "N": "PETRO WORLD TRANSPORTES DEL PERU SOCIEDAD ANONIMA CERRADA",
         "H": "PETROTHOR SOCIEDAD ANONIMA CERRADA"
       }
@@ -141,12 +128,7 @@
           "27": "Recaudo_Cofide_GNV",
           "28": "Gastos",
           "30": "Ventas_con_transferencia"
-        },
-        "FilasVariaciones": [
-          20,
-          21,
-          22
-        ]
+        }
       },
       "Escritura": {
         "Columnas": {
@@ -169,7 +151,7 @@
         }
       },
       "FilasClientesCreditos": {
-        "Q": "C & M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "Q": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
         "M": "ALTAS SENDAS S.A.C.",
         "AC": "ASOCIACION CIVIL CLUB NAUTICO POSEIDON",
         "AE": "FIBRAPRINT S.A.C.",
@@ -177,6 +159,544 @@
         "AH": "POSEIDON CARGO S.A.C.",
         "P": "FABRICACIONES ALCANTARA E.I.R.L.",
         "N": "PETROTHOR S.A.C."
+      }
+    },
+    "VIRU": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "11": "Total_venta_acumulada",
+          "16": "Total_Tarjeta_de_Credito_Liquidos",
+          "17": "Total_Tarjeta_de_Credito_GLP",
+          "26": "ErrorMaquina",
+          "28": "Gastos",
+          "30": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AJ",
+          "Total_Tarjeta_de_Credito_GLP": "AK",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AQ",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BS",
+          "Ventas_con_transferencia": "AT",
+          "DescuentoLiquidos": "AN",
+          "DescuentoGLP": "AO",
+          "Hermes_monto_liquido": "AS",
+          "Hermes_monto_GLP": "AY",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "L": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "R": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC",
+        "O": "TRANSPORTES AVALOS E HIJOS SRL",
+        "S": "RED FUEL S.A.",
+        "P": "JK GROUP CONSTRUCTION \u0026 MINING S.A.C.",
+        "H": "MUNICIPALIDAD DEL CENTRO POBLADO HUANCAQUITO BAJO",
+        "N": "PETROTHOR SOCIEDAD ANONIMA CERRADA"
+      }
+    },
+    "MAKITA": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "12": "Total_venta_acumulada",
+          "17": "Total_Tarjeta_de_Credito_Liquidos",
+          "18": "Total_Tarjeta_de_Credito_GLP",
+          "26": "ErrorMaquina",
+          "28": "Gastos",
+          "30": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AI",
+          "Total_Tarjeta_de_Credito_GLP": "AJ",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AQ",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BR",
+          "Ventas_con_transferencia": "AT",
+          "DescuentoLiquidos": "AM",
+          "DescuentoGLP": "AN",
+          "Hermes_monto_liquido": "AS",
+          "Hermes_monto_GLP": "AX",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {}
+    },
+    "SAN PABLO": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "12": "Total_venta_acumulada",
+          "17": "Total_Tarjeta_de_Credito_Liquidos",
+          "18": "Total_Tarjeta_de_Credito_GLP",
+          "26": "ErrorMaquina",
+          "29": "Gastos",
+          "31": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AH",
+          "Total_Tarjeta_de_Credito_GLP": "AI",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AP",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BO",
+          "Ventas_con_transferencia": "AS",
+          "DescuentoLiquidos": "AL",
+          "DescuentoGLP": "AM",
+          "Hermes_monto_liquido": "AR",
+          "Hermes_monto_GLP": "AU",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "K": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "I": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC"
+      }
+    },
+    "HUANCHACO": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "12": "Total_venta_acumulada",
+          "17": "Total_Tarjeta_de_Credito_Liquidos",
+          "18": "Total_Tarjeta_de_Credito_GLP",
+          "26": "ErrorMaquina",
+          "29": "Gastos",
+          "31": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AK",
+          "Total_Tarjeta_de_Credito_GLP": "AL",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AR",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BS",
+          "Ventas_con_transferencia": "AU",
+          "DescuentoLiquidos": "AO",
+          "DescuentoGLP": "AP",
+          "Hermes_monto_liquido": "AT",
+          "Hermes_monto_GLP": "AY",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "I": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "T": "RUIZ PEDRO LUIS ELBER",
+        "H": "RED FUEL S.A."
+      }
+    },
+    "ENACE": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "11": "Total_venta_acumulada",
+          "16": "Total_Tarjeta_de_Credito_Liquidos",
+          "17": "Total_Tarjeta_de_Credito_GLP",
+          "26": "ErrorMaquina",
+          "28": "Gastos",
+          "30": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AK",
+          "Total_Tarjeta_de_Credito_GLP": "AL",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AS",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BU",
+          "Ventas_con_transferencia": "AV",
+          "DescuentoLiquidos": "AO",
+          "DescuentoGLP": "AP",
+          "Hermes_monto_liquido": "AU",
+          "Hermes_monto_GLP": "BA",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "K": "RED FUEL S.A.",
+        "I": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "H": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC",
+        "V": "SERVICIOS ENERGETICOS AMBIENTALES S.R.L. - SEA S.R.L.",
+        "L": "PETROTHOR SOCIEDAD ANONIMA CERRADA",
+        "W": "GA INGENIEROS CONSTRUCTORES S.A.C."
+      }
+    },
+    "ACAPULCO": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "11": "Total_venta_acumulada",
+          "16": "Total_Tarjeta_de_Credito_Liquidos",
+          "17": "Total_Tarjeta_de_Credito_GLP",
+          "26": "ErrorMaquina",
+          "28": "Gastos",
+          "30": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AJ",
+          "Total_Tarjeta_de_Credito_GLP": "AK",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AR",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BT",
+          "Ventas_con_transferencia": "AU",
+          "DescuentoLiquidos": "AN",
+          "DescuentoGLP": "AO",
+          "Hermes_monto_liquido": "AT",
+          "Hermes_monto_GLP": "AZ",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "H": "C \u0026 M SERVICENTROS S",
+        "K": "RED DE COMBUSTIBLES ",
+        "N": "SERVICIOS ENERGETICO",
+        "T": "PETROTHOR SOCIEDAD A",
+        "U": "GONZALES Y DE LA CRU"
+      }
+    },
+    "CATACAOS": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "11": "Total_venta_acumulada",
+          "16": "Total_Tarjeta_de_Credito_Liquidos",
+          "17": "Total_Tarjeta_de_Credito_GLP",
+          "26": "ErrorMaquina",
+          "28": "Gastos",
+          "30": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AM",
+          "Total_Tarjeta_de_Credito_GLP": "AN",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AT",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BV",
+          "Ventas_con_transferencia": "AW",
+          "DescuentoLiquidos": "AQ",
+          "DescuentoGLP": "AR",
+          "Hermes_monto_liquido": "AV",
+          "Hermes_monto_GLP": "BB",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "N": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA",
+        "L": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC",
+        "H": "PETRO WORLD TRANSPORTES DEL PERU SOCIEDAD ANONIMA CERRADA"
+      }
+    },
+    "TULIS": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "8": "Venta_GPL",
+          "11": "Total_venta_acumulada",
+          "16": "Total_Tarjeta_de_Credito_Liquidos",
+          "17": "Total_Tarjeta_de_Credito_GLP",
+          "26": "ErrorMaquina",
+          "28": "Gastos",
+          "30": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "D",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AI",
+          "Total_Tarjeta_de_Credito_GLP": "AJ",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AP",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BR",
+          "Ventas_con_transferencia": "AS",
+          "DescuentoLiquidos": "AM",
+          "DescuentoGLP": "AO",
+          "Hermes_monto_liquido": "AR",
+          "Hermes_monto_GLP": "AX",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "X": "CORPORACION TICSANI E.I.R.L.",
+        "J": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC",
+        "S": "PETROTHOR SOCIEDAD ANONIMA CERRADA",
+        "I": "C \u0026 M SERVICENTROS SOCIEDAD ANONIMA CERRADA"
+      }
+    },
+    "SAN MARCOS": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "10": "Total_venta_acumulada",
+          "15": "Total_Tarjeta_de_Credito_Liquidos",
+          "16": "Total_Tarjeta_de_Credito_GLP",
+          "25": "ErrorMaquina",
+          "27": "Gastos",
+          "29": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AH",
+          "Total_Tarjeta_de_Credito_GLP": "AI",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AO",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BQ",
+          "Ventas_con_transferencia": "AR",
+          "DescuentoLiquidos": "AL",
+          "DescuentoGLP": "AN",
+          "Hermes_monto_liquido": "AQ",
+          "Hermes_monto_GLP": "AW",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {}
+    },
+    "MARIA": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "10": "Total_venta_acumulada",
+          "15": "Total_Tarjeta_de_Credito_Liquidos",
+          "16": "Total_Tarjeta_de_Credito_GLP",
+          "25": "ErrorMaquina",
+          "27": "Gastos",
+          "29": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AH",
+          "Total_Tarjeta_de_Credito_GLP": "AI",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AO",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BQ",
+          "Ventas_con_transferencia": "AR",
+          "DescuentoLiquidos": "AL",
+          "DescuentoGLP": "AN",
+          "Hermes_monto_liquido": "AQ",
+          "Hermes_monto_GLP": "AW",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {}
+    },
+    "VELITA": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "10": "Total_venta_acumulada",
+          "15": "Total_Tarjeta_de_Credito_Liquidos",
+          "16": "Total_Tarjeta_de_Credito_GLP",
+          "25": "ErrorMaquina",
+          "27": "Gastos",
+          "29": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AM",
+          "Total_Tarjeta_de_Credito_GLP": "AN",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AT",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BV",
+          "Ventas_con_transferencia": "AW",
+          "DescuentoLiquidos": "AQ",
+          "DescuentoGLP": "AR",
+          "Hermes_monto_liquido": "AV",
+          "Hermes_monto_GLP": "BB",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "N": "REPRESENTACIONES VARGAS S.A.",
+        "AK": "COOPERATIVA DE AHORRO Y CR\u00C9DITO SAN MART\u00CDN DE PORRES LTDA.",
+        "AI": "ACQUA BEATA S.R.L.",
+        "J": "RED DE COMBUSTIBLES LIQUIDOS SAC REDCOL SAC",
+        "K": "PROGRAMA NACIONAL DE SANEAMIENTO RURAL",
+        "T": "PETRO WORLD TRANSPORTES DEL PERU SOCIEDAD ANONIMA CERRADA",
+        "P": "INSTITUTO NACIONAL DE DEFENSA CIVIL",
+        "U": "GRIFO FLOTANTE MARIA EUGENIA EIRL",
+        "Z": "EMERAL LOGISTICS S.A.C."
+      }
+    },
+    "QUISTOCOCHA": {
+      "Lectura": {
+        "ColumnaFecha": 14,
+        "ColumnaTotales": 15,
+        "ColumnaCreditoNombre": 0,
+        "ColumnaCreditoMonto": 6,
+        "ColumnaVariaCombusNombre": 16,
+        "ColumnaVariaCombusMonto": 18,
+        "ColumnaTablaHermes": 14,
+        "MapeoFilas": {
+          "10": "Total_venta_acumulada",
+          "15": "Total_Tarjeta_de_Credito_Liquidos",
+          "16": "Total_Tarjeta_de_Credito_GLP",
+          "25": "ErrorMaquina",
+          "27": "Gastos",
+          "29": "Ventas_con_transferencia"
+        }
+      },
+      "Escritura": {
+        "Columnas": {
+          "Venta_GPL": "",
+          "Venta_GNV": "",
+          "Total_venta_acumulada": "C",
+          "Total_Tarjeta_de_Credito_Liquidos": "AA",
+          "Total_Tarjeta_de_Credito_GLP": "",
+          "Total_Tarjeta_de_Credito_GNV": "",
+          "ErrorMaquina": "AG",
+          "Recaudo_Cofide_GNV": "",
+          "Gastos": "BB",
+          "Ventas_con_transferencia": "AJ",
+          "DescuentoLiquidos": "AE",
+          "DescuentoGLP": "AF",
+          "Hermes_monto_liquido": "AI",
+          "Hermes_monto_GLP": "",
+          "Hermes_monto_GNV1": "",
+          "Hermes_monto_GNV2": ""
+        }
+      },
+      "FilasClientesCreditos": {
+        "H": "HONDA SELVA DEL PERU S.A.",
+        "L": "PETRO WORLD TRANSPORTES DEL PERU SOCIEDAD ANONIMA CERRADA"
       }
     }
   }

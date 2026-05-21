@@ -60,7 +60,6 @@ namespace ConsoleApp1.Services
                     if (configGrifo == null) return;
 
                     var filasDeseadas = new HashSet<int>(configGrifo.MapeoFilas.Keys.Select(int.Parse));
-                    var filasVariaciones = new HashSet<int>(configGrifo.FilasVariaciones);
 
                     ArchivoGrifo nuevoGrifo = new ArchivoGrifo(nombreGrifoDetectado, Path.GetFileName(ruta));
 
@@ -73,6 +72,7 @@ namespace ConsoleApp1.Services
                         decimal descuentoLiquidos_Total = 0;
                         int filaActual = 1;
                         bool leyendoClientes = false;
+                        bool leyendoVariaciones = false;
                         int flagclientecredito = 0;
                         var clientesAgrupados = new Dictionary<string, decimal>();
 
@@ -157,21 +157,41 @@ namespace ConsoleApp1.Services
                                 }
                             }
 
-                            if (filasVariaciones.Contains(filaActual))
+                            if (filaActual >= 17 && filaActual <= 50)
                             {
                                 int colLetraColumnaVariaCombusNombre = configGrifo.ColumnaVariaCombusNombre;
-                                int colLetraColumnaVariaCombusMonto = configGrifo.ColumnaVariaCombusMonto;
                                 var varia_combus_nombre = reader.GetValue(colLetraColumnaVariaCombusNombre);
-                                var varia_combus_monto = reader.GetValue(colLetraColumnaVariaCombusMonto);
-                                decimal.TryParse(varia_combus_monto?.ToString(), out decimal montoActualVariacion);
+                                string? nombreTrimmed = varia_combus_nombre?.ToString()?.Trim();
 
-                                if (varia_combus_nombre?.ToString()?.Trim() == "GLP")
-                                    registro.DescuentoGLP = montoActualVariacion;
+                                if (leyendoVariaciones)
+                                {
+                                    if (string.Equals(nombreTrimmed, "TOTAL", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        leyendoVariaciones = false;
+                                    }
+                                    else
+                                    {
+                                        int colLetraColumnaVariaCombusMonto = configGrifo.ColumnaVariaCombusMonto;
+                                        var varia_combus_monto = reader.GetValue(colLetraColumnaVariaCombusMonto).ToString().Replace("-", "");
+                                           
+                                        decimal.TryParse(varia_combus_monto?.ToString(), out decimal montoActualVariacion);
+
+                                        if (string.Equals(nombreTrimmed, "GLP", StringComparison.OrdinalIgnoreCase))
+                                            registro.DescuentoGLP = montoActualVariacion;
+                                        else
+                                            descuentoLiquidos_Total += montoActualVariacion;
+                                    }
+                                }
                                 else
-                                    descuentoLiquidos_Total += montoActualVariacion;
+                                {
+                                    if (string.Equals(nombreTrimmed, "COMBUSTIBLE", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        leyendoVariaciones = true;
+                                    }
+                                }
                             }
 
-                            if (filaActual >= 55 && filaActual <= 130)
+                            if (filaActual >= 40 && filaActual <= 130)
                             {
                                 int colLetraColumnaTablaHermes = configGrifo.ColumnaTablaHermes;
                                 var celdaIdentificadora = reader.GetValue(colLetraColumnaTablaHermes);
