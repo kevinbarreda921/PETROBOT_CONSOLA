@@ -1,7 +1,7 @@
 [
   {
-    "Grifo": "CHILCA",
-    "Archivo": "R.PARTE DIARIO ENERO 2026-CHILCA.xlsx",
+    "Grifo": "BRASIL",
+    "Archivo": "PARTE DIARIO 3 ENERO BRASIL.xlsx",
     "Mensajes": [
       {
         "Estado": "INFO",
@@ -28,6 +28,10 @@
         "Descripcion": "dia 6/01/2026 procesado correctamente"
       },
       {
+        "Estado": "ERROR",
+        "Descripcion": "El cliente \u0027LUIS RODRIGUEZ\u0027 no existe en la configuraci\u00F3n JSON"
+      },
+      {
         "Estado": "INFO",
         "Descripcion": "dia 7/01/2026 procesado correctamente"
       },
@@ -38,6 +42,10 @@
       {
         "Estado": "INFO",
         "Descripcion": "dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "ERROR",
+        "Descripcion": "El cliente \u0027LUIS RODRIGUEZ\u0027 no existe en la configuraci\u00F3n JSON"
       },
       {
         "Estado": "INFO",
@@ -86,6 +94,10 @@
       {
         "Estado": "INFO",
         "Descripcion": "dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "ERROR",
+        "Descripcion": "El cliente \u0027LUIS RODRIGUEZ\u0027 no existe en la configuraci\u00F3n JSON"
       },
       {
         "Estado": "INFO",
