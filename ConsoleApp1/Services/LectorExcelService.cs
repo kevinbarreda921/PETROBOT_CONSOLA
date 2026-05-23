@@ -172,9 +172,9 @@ namespace ConsoleApp1.Services
                                     else
                                     {
                                         int colLetraColumnaVariaCombusMonto = configGrifo.ColumnaVariaCombusMonto;
-                                        var varia_combus_monto = reader.GetValue(colLetraColumnaVariaCombusMonto).ToString().Replace("-", "");
+                                        var varia_combus_monto = reader.GetValue(colLetraColumnaVariaCombusMonto)?.ToString()?.Replace("-", "");
                                            
-                                        decimal.TryParse(varia_combus_monto?.ToString(), out decimal montoActualVariacion);
+                                        decimal.TryParse(varia_combus_monto, out decimal montoActualVariacion);
 
                                         if (string.Equals(nombreTrimmed, "GLP", StringComparison.OrdinalIgnoreCase))
                                             registro.DescuentoGLP = montoActualVariacion;

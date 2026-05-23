@@ -20,14 +20,10 @@ namespace ConsoleApp1.Services
 
         public void Procesar()
         {
+            var CONTADOR_dES = 1;
             Console.WriteLine("Iniciando lectura de archivos...");
             var listaGrifosProcesar = _lector.LeerPartesDiarios();
 
-            List<string> misGrifos = listaGrifosProcesar
-                .Where(g => !string.IsNullOrEmpty(g.Grifo))
-                .Select(g => g.Grifo!)
-                .Distinct()
-                .ToList();
 
             string rutaProyecto = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
             string carpetaRegistroVentas = Path.Combine(rutaProyecto, "ArchivosExcel", "Registro_ventas");
@@ -49,10 +45,13 @@ namespace ConsoleApp1.Services
             package.Compression = CompressionLevel.BestSpeed; // Reducir overhead de CPU al comprimir
             var workbook = package.Workbook;
 
-            foreach (string grifoObjetivo in misGrifos)
+            foreach (var archivoGrifoActual in listaGrifosProcesar)
             {
-                var archivoGrifoActual = listaGrifosProcesar.FirstOrDefault(g => g.Grifo == grifoObjetivo);
-                if (archivoGrifoActual == null) continue;
+                string? grifoObjetivo = archivoGrifoActual.Grifo;
+                if (string.IsNullOrEmpty(grifoObjetivo)) continue;
+
+                LoggerService.Info(grifoObjetivo, archivoGrifoActual.Archivo ?? "", $" CONTADOR {CONTADOR_dES}");
+                CONTADOR_dES++;
 
                 // Buscamos la hoja cuyo nombre contenga el grifoObjetivo de forma flexible (ignora mayúsculas)
                 var hojaEPPlus = workbook.Worksheets.FirstOrDefault(w => w.Name.IndexOf(grifoObjetivo, StringComparison.OrdinalIgnoreCase) >= 0);
@@ -92,12 +91,14 @@ namespace ConsoleApp1.Services
                         }
                     }
 
-                    foreach (string fechaABuscar in fechasDelGrifo)
+            
+                foreach (string fechaABuscar in fechasDelGrifo)
                     {
                         if (mapaFechasFilas.TryGetValue(fechaABuscar, out int filaDestino))
                         {
-                            LoggerService.Info(grifoObjetivo, archivoGrifoActual.Archivo, $" El grifo {grifoObjetivo} del dia {fechaABuscar} procesado correctamente");
+                        LoggerService.Info(grifoObjetivo, archivoGrifoActual.Archivo, $" El grifo {grifoObjetivo} del dia {fechaABuscar} procesado correctamente");
 
+                   
                             if (configColumnas != null)
                             {
                                 var ventaParaEscribir = archivoGrifoActual.ListVenta.FirstOrDefault(v => v.Dia == fechaABuscar);
