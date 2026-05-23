@@ -15,9 +15,21 @@ namespace ConsoleApp1.Services
             .GetProperties(BindingFlags.Public | BindingFlags.Instance)
             .ToDictionary(p => p.Name, p => p, StringComparer.Ordinal);
 
+        private static bool TryParseDecimal(object? valor, out decimal parsed)
+        {
+            parsed = 0m;
+            if (valor == null) return false;
+            if (valor is decimal dec) { parsed = dec; return true; }
+            if (valor is double dbl) { parsed = (decimal)dbl; return true; }
+            if (valor is int integer) { parsed = (decimal)integer; return true; }
+
+            string str = valor.ToString() ?? "";
+            str = str.Replace(",", ".");
+            return decimal.TryParse(str, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out parsed);
+        }
+
         public void EscribirFila(ExcelWorksheet hoja, VentaDTO venta, int filaDestino, Dictionary<string, string> columnas)
         {
-
             foreach (var kvp in columnas)
             {
                 string nombrePropiedad = kvp.Key;
@@ -30,17 +42,16 @@ namespace ConsoleApp1.Services
                     // Lógica especial para Total_venta_acumulada solicitada
                     if (nombrePropiedad == "Total_venta_acumulada" && valor != null)
                     {
-                        decimal totalVenta = 0;
-                        if (valor is decimal decVal) totalVenta = decVal;
-                        else decimal.TryParse(valor.ToString(), out totalVenta);
-
-                        if (totalVenta != 0.0m)
+                        if (TryParseDecimal(valor, out decimal totalVenta))
                         {
-                            string colGlp = columnas.TryGetValue("Venta_GPL", out string? cg) && !string.IsNullOrWhiteSpace(cg) ? $"{cg}{filaDestino}" : "0";
-                            string colGnv = columnas.TryGetValue("Venta_GNV", out string? cn) && !string.IsNullOrWhiteSpace(cn) ? $"{cn}{filaDestino}" : "0";
+                            if (totalVenta != 0m)
+                            {
+                                string colGlp = columnas.TryGetValue("Venta_GPL", out string? cg) && !string.IsNullOrWhiteSpace(cg) ? $"{cg}{filaDestino}" : "0";
+                                string colGnv = columnas.TryGetValue("Venta_GNV", out string? cn) && !string.IsNullOrWhiteSpace(cn) ? $"{cn}{filaDestino}" : "0";
 
-                            string strTotal = totalVenta.ToString(System.Globalization.CultureInfo.InvariantCulture);
-                            hoja.Cells[$"{columnaLetra}{filaDestino}"].Formula = $"{strTotal}-{colGlp}-{colGnv}";
+                                string strTotal = totalVenta.ToString(System.Globalization.CultureInfo.InvariantCulture);
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Formula = $"{strTotal}-{colGlp}-{colGnv}";
+                            }
                         }
                         continue;
                     }
@@ -48,19 +59,20 @@ namespace ConsoleApp1.Services
                     if (valor != null)
                     {
                         bool esCero = false;
-                        if (valor is decimal dec && dec == 0m) esCero = true;
-                        else if (valor is double dbl && dbl == 0d) esCero = true;
-                        else if (valor is int integer && integer == 0) esCero = true;
-                        else if (decimal.TryParse(valor.ToString(), out decimal parsed) && parsed == 0m) esCero = true;
+                        if (TryParseDecimal(valor, out decimal parsed))
+                        {
+                            if (parsed == 0m) esCero = true;
+                        }
+                        else
+                        {
+                            string s = valor.ToString()?.Trim() ?? "";
+                            if (s == "0" || s == "0.00" || s == "0,00" || string.IsNullOrEmpty(s)) esCero = true;
+                        }
 
                         if (!esCero)
                         {
-                            if (valor is decimal decValor)
+                            if (TryParseDecimal(valor, out decimal decValor))
                                 hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = decValor;
-                            else if (valor is double dblValor)
-                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = dblValor;
-                            else if (valor is int intValor)
-                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = intValor;
                             else
                                 hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
                         }
@@ -84,26 +96,22 @@ namespace ConsoleApp1.Services
                     if (valor != null)
                     {
                         bool esCero = false;
-                        if (valor is decimal dec && dec == 0m) esCero = true;
-                        else if (valor is double dbl && dbl == 0d) esCero = true;
-                        else if (valor is int integer && integer == 0) esCero = true;
-                        else if (decimal.TryParse(valor.ToString(), out decimal parsed) && parsed == 0m) esCero = true;
+                        if (TryParseDecimal(valor, out decimal parsed))
+                        {
+                            if (parsed == 0m) esCero = true;
+                        }
+                        else
+                        {
+                            string s = valor.ToString()?.Trim() ?? "";
+                            if (s == "0" || s == "0.00" || s == "0,00" || string.IsNullOrEmpty(s)) esCero = true;
+                        }
 
                         if (!esCero)
                         {
-                            if (valor is decimal decValor)
+                            if (TryParseDecimal(valor, out decimal decValor))
                                 hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = decValor;
-                            else if (valor is double dblValor)
-                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = dblValor;
-                            else if (valor is int intValor)
-                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = intValor;
                             else
-                            {
-                                if (decimal.TryParse(valor.ToString(), out decimal parsedDec))
-                                    hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = parsedDec;
-                                else
-                                    hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
-                            }
+                                hoja.Cells[$"{columnaLetra}{filaDestino}"].Value = valor.ToString();
                         }
                     }
                 }

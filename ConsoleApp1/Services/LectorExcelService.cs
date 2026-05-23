@@ -240,7 +240,8 @@ namespace ConsoleApp1.Services
                         registro.DescuentoLiquidos = descuentoLiquidos_Total;
 
                         var listaFiltrada = listaHermes
-                            .Where(x => string.Equals(x.Banco, "SCOTIABANK", StringComparison.OrdinalIgnoreCase))
+                            .Where(x => string.Equals(x.Banco, "SCOTIABANK", StringComparison.OrdinalIgnoreCase) ||
+                                        string.Equals(x.Banco, "MIBANCO", StringComparison.OrdinalIgnoreCase))
                             .ToList();
 
                         var liquidosScotia = listaFiltrada

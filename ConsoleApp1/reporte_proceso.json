@@ -1,11 +1,279 @@
 [
   {
+    "Grifo": "PUENTE",
+    "Archivo": "01 PARTE DIARIO ENERO 2026 PUENTE PIEDRA.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 3"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo PUENTE del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "MAKITA",
+    "Archivo": "PARTE_DIARIO_MAKITA 2026.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "ERROR",
+        "Descripcion": "En el dia 1/01/2026 Se encontraron 2 registros de Liquido para SCOTIABANK (maximo permitido: 1). "
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 7"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MAKITA del dia 30/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
     "Grifo": "QUISTOCOCHA",
     "Archivo": "PARTE DIARIA SIGES - QUISTOCOCHA ENERO 2026.xlsx",
     "Mensajes": [
       {
         "Estado": "INFO",
-        "Descripcion": " CONTADOR 1"
+        "Descripcion": " CONTADOR 12"
       },
       {
         "Estado": "INFO",
@@ -130,6 +398,1618 @@
       {
         "Estado": "INFO",
         "Descripcion": " El grifo QUISTOCOCHA del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "CATACAOS",
+    "Archivo": "01 PARTE DIARIO ENERO 2026 EDS CATACAOS.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "ERROR",
+        "Descripcion": "En el dia 16/01/2026 Se encontraron 2 registros de Liquido para SCOTIABANK (maximo permitido: 1). "
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 13"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CATACAOS del dia 1/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "SAN MARCOS",
+    "Archivo": "REPORTE SIGES SAN MARCOS-ENERO.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 14"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN MARCOS del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "ACAPULCO",
+    "Archivo": "PARTE DIARIO ACAPULCO-ENERO.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 9"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ACAPULCO del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "SAN PABLO",
+    "Archivo": "PARTE_DIARIO_SAN PABLO ENERO 2026.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 8"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo SAN PABLO del dia 30/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "CHILCA",
+    "Archivo": "R.PARTE DIARIO ENERO 2026-CHILCA.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "ERROR",
+        "Descripcion": "En el dia 15/01/2026 Se encontraron 2 registros de Liquido para SCOTIABANK (maximo permitido: 1). "
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 2"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo CHILCA del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "VIRU",
+    "Archivo": "14 VIRU  SIGES  ENERO 2026.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 11"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VIRU del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "VELITA",
+    "Archivo": "REPORTE PARTE DIARIO VELITA  ENERO 2026.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 6"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo VELITA del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "TULIS",
+    "Archivo": "50 TULIS  ENERO 2026.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 10"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo TULIS del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "MARIA",
+    "Archivo": "REPORTE SIGES MARIA EUGUENIA-ENERO.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 15"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo MARIA del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "BRASIL",
+    "Archivo": "PARTE DIARIO 3 ENERO BRASIL.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 1"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "ERROR",
+        "Descripcion": "El cliente \u0027LUIS RODRIGUEZ\u0027 no existe en la configuraci\u00F3n JSON"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "ERROR",
+        "Descripcion": "El cliente \u0027LUIS RODRIGUEZ\u0027 no existe en la configuraci\u00F3n JSON"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "ERROR",
+        "Descripcion": "El cliente \u0027LUIS RODRIGUEZ\u0027 no existe en la configuraci\u00F3n JSON"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo BRASIL del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "ENACE",
+    "Archivo": "PARTE DIARIO 3 ENERO 2026-ENACE.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 5"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo ENACE del dia 31/01/2026 procesado correctamente"
+      }
+    ]
+  },
+  {
+    "Grifo": "HUANCHACO",
+    "Archivo": "REPORTE SIGES ENERO 2026-HUANCHACO.xlsx",
+    "Mensajes": [
+      {
+        "Estado": "INFO",
+        "Descripcion": " CONTADOR 4"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 1/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 2/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 3/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 4/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 5/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 6/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 7/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 8/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 9/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 10/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 11/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 12/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 13/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 14/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 15/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 16/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 17/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 18/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 19/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 20/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 21/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 22/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 23/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 24/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 25/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 26/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 27/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 28/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 29/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 30/01/2026 procesado correctamente"
+      },
+      {
+        "Estado": "INFO",
+        "Descripcion": " El grifo HUANCHACO del dia 31/01/2026 procesado correctamente"
       }
     ]
   }
