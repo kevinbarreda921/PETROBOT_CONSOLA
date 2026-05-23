@@ -79,7 +79,7 @@ namespace ConsoleApp1.Services
                         bool hermesTablaEncontrada = false;
                         bool hermesLeyendoTablaFlotante = false;
                         string hermesPalabraClaveCabecera = "IMPORTE S/.";
-                        int contadorHermes = 1;
+                        var listaHermes = new List<(string Banco, string Tipo, decimal Monto)>();
 
                         while (reader.Read())
                         {
@@ -100,7 +100,7 @@ namespace ConsoleApp1.Services
                                 }
                             }
 
-                            if (filaActual > 129 || contadorHermes == 5) break;
+                            if (filaActual > 129) break;
 
                             if (filasDeseadas.Contains(filaActual))
                             {
@@ -122,7 +122,7 @@ namespace ConsoleApp1.Services
                                 }
                             }
 
-                            if (!leyendoClientes && flagclientecredito == 0 && filaActual >= 13 && filaActual <= 30)
+                            if (!leyendoClientes && flagclientecredito == 0 && filaActual >= 10 && filaActual <= 30)
                             {
                                 int colLetraCreditoNombre = configGrifo.ColumnaCreditoNombre;
                                 var valorNombre = reader.GetValue(colLetraCreditoNombre);
@@ -143,6 +143,9 @@ namespace ConsoleApp1.Services
                                     string nombreLimpio = (valorNombre.ToString() ?? "").Trim();
                                     decimal.TryParse(valorMonto?.ToString(), out decimal montoActual);
 
+                                    if (nombreGrifoDetectadoStr == "ACAPULCO") { 
+                                       nombreLimpio = nombreLimpio.Length > 20 ? nombreLimpio.Substring(0, 20) : nombreLimpio;
+                                    }
                                     if (clientesAgrupados.TryGetValue(nombreLimpio, out decimal montoExistente))
                                         clientesAgrupados[nombreLimpio] = montoExistente + montoActual;
                                     else
@@ -211,18 +214,18 @@ namespace ConsoleApp1.Services
                                     {
                                         decimal.TryParse(textoCelda, out decimal montoActualHermes);
 
-                                        switch (contadorHermes)
-                                        {
-                                            case 1: registro.Hermes_monto_liquido = montoActualHermes; break;
-                                            case 2: registro.Hermes_monto_GLP = montoActualHermes; break;
-                                            case 3: registro.Hermes_monto_GNV1 = montoActualHermes; break;
-                                            case 4: registro.Hermes_monto_GNV2 = montoActualHermes; break;
-                                        }
-                                        contadorHermes++;
+                                        var celdahermesbanco = reader.GetValue(colLetraColumnaTablaHermes - 5);
+                                        string textohermesbanco = celdahermesbanco?.ToString()?.Trim() ?? "";
+
+                                        var celdahermestipo = reader.GetValue(colLetraColumnaTablaHermes + 2);
+                                        string textohermestipo = celdahermestipo?.ToString()?.Trim() ?? "";
+
+                                        listaHermes.Add((textohermesbanco, textohermestipo, montoActualHermes));
                                     }
                                     else
                                     {
                                         hermesLeyendoTablaFlotante = false;
+                                        break; // Ya no recorrer mas filas
                                     }
                                 }
                             }
@@ -235,6 +238,79 @@ namespace ConsoleApp1.Services
                             registro.AgregarClienteCredito(entrada.Key, entrada.Value);
                         }
                         registro.DescuentoLiquidos = descuentoLiquidos_Total;
+
+                        var listaFiltrada = listaHermes
+                            .Where(x => string.Equals(x.Banco, "SCOTIABANK", StringComparison.OrdinalIgnoreCase))
+                            .ToList();
+
+                        var liquidosScotia = listaFiltrada
+                            .Where(x => x.Tipo.Contains("liquido", StringComparison.OrdinalIgnoreCase) || 
+                                        x.Tipo.Contains("líquido", StringComparison.OrdinalIgnoreCase))
+                            .ToList();
+
+                        var glpScotia = listaFiltrada
+                            .Where(x => x.Tipo.Contains("GLP", StringComparison.OrdinalIgnoreCase))
+                            .ToList();
+
+                        var gnvScotia = listaFiltrada
+                            .Where(x => x.Tipo.Contains("GNV", StringComparison.OrdinalIgnoreCase))
+                            .ToList();
+
+                        // Validaciones de límites
+                        bool cumpleReglas = true;
+                        string mensajeError = "";
+
+                        if (liquidosScotia.Count > 1)
+                        {
+                            cumpleReglas = false;
+                            mensajeError += $"Se encontraron {liquidosScotia.Count} registros de Liquido para SCOTIABANK (maximo permitido: 1). ";
+                        }
+
+                        if (glpScotia.Count > 1)
+                        {
+                            cumpleReglas = false;
+                            mensajeError += $"Se encontraron {glpScotia.Count} registros de GLP para SCOTIABANK (maximo permitido: 1). ";
+                        }
+
+                        if (gnvScotia.Count > 2)
+                        {
+                            cumpleReglas = false;
+                            mensajeError += $"Se encontraron {gnvScotia.Count} registros de GNV para SCOTIABANK (maximo permitido: 2). ";
+                        }
+
+                        if (cumpleReglas)
+                        {
+                            // Llenado de variables si cumple las reglas
+                            registro.Hermes_monto_liquido = liquidosScotia.Any() ? liquidosScotia.Sum(x => x.Monto) : 0m;
+                            registro.Hermes_monto_GLP = glpScotia.Any() ? glpScotia.Sum(x => x.Monto) : 0m;
+
+                            if (gnvScotia.Count == 1)
+                            {
+                                registro.Hermes_monto_GNV1 = gnvScotia[0].Monto;
+                                registro.Hermes_monto_GNV2 = 0m;
+                            }
+                            else if (gnvScotia.Count >= 2)
+                            {
+                                var ordenadosGnv = gnvScotia.OrderByDescending(x => x.Monto).ToList();
+                                registro.Hermes_monto_GNV1 = ordenadosGnv.First().Monto;
+                                registro.Hermes_monto_GNV2 = ordenadosGnv.Last().Monto;
+                            }
+                            else
+                            {
+                                registro.Hermes_monto_GNV1 = 0m;
+                                registro.Hermes_monto_GNV2 = 0m;
+                            }
+                        }
+                        else
+                        {
+                            // Registrar error en reporte_proceso.json y poner variables en 0
+                            LoggerService.Error(nombreGrifoDetectadoStr, Path.GetFileName(ruta), $"En el dia {registro.Dia} {mensajeError}");
+
+                            registro.Hermes_monto_liquido = 0m;
+                            registro.Hermes_monto_GLP = 0m;
+                            registro.Hermes_monto_GNV1 = 0m;
+                            registro.Hermes_monto_GNV2 = 0m;
+                        }
 
                         nuevoGrifo.AgregarVenta(registro);
 
